@@ -5,19 +5,22 @@ export default defineNuxtConfig({
    app: {
       baseURL: '/',
       head: {
-         title : "Phanthakarn's Portfolio",
+         title: "Phanthakarn's Portfolio",
          meta: [
             { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-          ],
-          script: [],
-          link: [
+         ],
+         script: [],
+         link: [
             // <link rel="stylesheet" href="https://myawesome-lib.css">
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap' }
-          ],
-          style: [],
+         ],
+         style: [],
       }
    },
    ssr: false,
    modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
    css: ['@/assets/css/main.css'],
+   nitro: {
+      preset: 'node-server'
+   }
 })
