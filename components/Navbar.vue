@@ -30,7 +30,7 @@ window.addEventListener("scroll", myScrollFunc);
 
 <template>
    <div class="w-full h-16 bg-[#171820] fixed top-0 duration-300 border-b-[1px] border-b-primary lg:hidden"
-      :class="{ 'h-20 lg:bg-transparent ': !is_scroll, 'drop-shadow-none border-b-gray-800': is_open }">
+      :class="{ 'h-20 lg:bg-transparent ': !is_scroll, 'drop-shadow-none border-none': is_open }">
       <div class="relative h-full w-full">
          <div class="w-full mx-auto h-full px-5 z-[2] absolute bg-[#171820]">
             <div class="w-full h-20 flex items-center justify-between">
@@ -59,10 +59,50 @@ window.addEventListener("scroll", myScrollFunc);
          </div>
       </div>
    </div>
+
+   <!-- Responsive Navbar -->
+   <div class="w-full h-16 hidden lg:block fixed top-0 bg-[#171820] duration-300 border-b-[1px] border-b-primary"
+      :class="{ 'h-20 lg:bg-transparent border-none': !is_scroll, 'drop-shadow-none border-b-gray-800': is_open }">
+      <div class="container h-full mx-auto flex items-center justify-between">
+         <h1 class="text-4xl font-medium">Phanthakarn<span class="text-primary">.dev</span></h1>
+         <ul class="w-full flex items-center justify-evenly text-xl">
+            <li v-for="(menu, index) in menus" :key="index">
+               <NuxtLink :to="menu.link" :class="{ 'text-primary': $route.path == menu.link }">
+                  <p class="font-semibold hover-underline-animation after:bg-base-slate-800 after:h-0.5"
+                     :class="{ 'text-primary after:bg-primary': $route.path == menu.link, 'after:bg-black dark:after:bg-white': $route.path != menu.link }">
+                     {{ menu.name }}</p>
+               </NuxtLink>
+            </li>
+         </ul>
+      </div>
+   </div>
 </template>
 
 <style scoped>
-.hide{
+.hide {
    top: -128px;
 }
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 </style>
