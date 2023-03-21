@@ -48,7 +48,7 @@ function scrollDown() {
             <div
                 class="w-80 sm:w-[500px] lg:w-96 xl:w-[500px] 2xl:w-[650px] flex justify-center items-center mt-12 mx-auto text-3xl sm:text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
                 <img src="/img/hero/me.png" alt=""
-                    class="absolute w-5/6 z-10 my-auto animate-[floaty_2.5s_infinite_alternate]">
+                    class="absolute w-5/6 z-10 my-auto animate-floaty">
                 <img src="/img/hero/fire-icon.png" alt="" class="drop-shadow-2xl z-0">
             </div>
         </div>
@@ -76,13 +76,13 @@ function scrollDown() {
             <div class="hidden sm:flex justify-center items-center space-x-3 cursor-pointer " @click="scrollDown">
                 <p class="text-center text-xl font-bold">SCROLL</p>
                 <div
-                    class="scrolldown relative border-4 border-primary w-[30px] h-[50px] rounded-full before:content-[''] before:absolute before:bottom-[30px] before:left-1/2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary before:ml-[-3px] before:animate-[scrolldown_1.2s_infinite]">
+                    class="scrolldown relative border-4 border-primary w-[30px] h-[50px] rounded-full before:content-[''] before:absolute before:bottom-[30px] before:left-1/2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary before:ml-[-3px] before:animate-scrolldown">
                     <div class="chevrons pt-1.5 -ml-1 mt-12 w-[30px] flex flex-col items-center">
                         <div
-                            class="chevrondown -mt-1.5 relative border-primary border-r-[3px] border-b-[3px] inline-block w-2.5 h-2.5 rotate-45 animate-[pulse_500ms_ease_infinite_alternate]">
+                            class="chevrondown -mt-1.5 relative border-primary border-r-[3px] border-b-[3px] inline-block w-2.5 h-2.5 rotate-45 animate-pulse">
                         </div>
                         <div
-                            class="chevrondown -mt-1.5 relative border-primary border-r-[3px] border-b-[3px] inline-block w-2.5 h-2.5 rotate-45 animate-[pulse_500ms_ease_infinite_alternate_300ms]">
+                            class="chevrondown -mt-1.5 relative border-primary border-r-[3px] border-b-[3px] inline-block w-2.5 h-2.5 rotate-45 animate-pulse2">
                         </div>
                     </div>
                 </div>

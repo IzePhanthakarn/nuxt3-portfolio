@@ -3,7 +3,7 @@ const error = useError()
 </script>
 
 <template>
-   <div class="h-screen w-full text-white bg-base flex flex-col items-center justify-center">
+   <div class="h-screen w-full text-white bg-color-base flex flex-col items-center justify-center">
       <!-- <div class="w-full fixed top-0 h-20 bg-red-200"></div> -->
       <Navbar />
       <div class="container flex flex-col lg:flex-row items-center justify-evenly">
@@ -18,8 +18,8 @@ const error = useError()
                </nuxt-link>
             </div>
          </div>
-         <div class="img mt-12">
-            <img src="/ghost.png" alt="" class="mx-auto">
+         <div class="img mt-12 ">
+            <img src="/ghost.png" alt="" class="mx-auto animate-floaty">
             <div class="shadow"></div>
          </div>
       </div>
@@ -37,7 +37,7 @@ const error = useError()
 img {
    width: 230px;
    height: auto;
-   animation: floaty 1.8s infinite alternate;
+   /* animation: floaty 1.8s infinite alternate; */
 }
 
 .shadow {
