@@ -1,9 +1,5 @@
-<script setup>
-
-</script>
-
 <template>
-   <div class="w-full h-auto sm:h-16 border-0 lg:border-t-[1px] border-primary">
+   <div class="w-full h-auto sm:h-16 border-0 lg:border-t-[1px] border-primary text-white">
       <div class="container h-full mx-auto mt-2 sm:mt-0 flex flex-col sm:flex-row items-center justify-between">
          <div class="flex justify-around items-center space-x-3">
             <Nuxt-Link to="https://www.facebook.com/ize.phanthakarn.5/" target="_blank">

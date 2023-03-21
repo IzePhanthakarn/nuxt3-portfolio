@@ -18,8 +18,8 @@ const error = useError()
                </nuxt-link>
             </div>
          </div>
-         <div class="img mt-12">
-            <img src="/ghost.png" alt="" class="mx-auto">
+         <div class="img mt-12 ">
+            <img src="/ghost.png" alt="" class="mx-auto animate-floaty">
             <div class="shadow"></div>
          </div>
       </div>
@@ -37,7 +37,7 @@ const error = useError()
 img {
    width: 230px;
    height: auto;
-   animation: floaty 1.8s infinite alternate;
+   /* animation: floaty 1.8s infinite alternate; */
 }
 
 .shadow {

@@ -1,6 +1,7 @@
 <template>
-   <div class="background z-10">
-      <HomeHero />
+   <div class="text-white">
+      <HomeHero class="background" />
+      <HomeAbout />
    </div>
 </template>
 

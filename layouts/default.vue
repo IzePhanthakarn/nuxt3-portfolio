@@ -18,10 +18,10 @@ function toTop() {
 </script>
 
 <template>
-    <div class="duration-300 bg-base">
+    <div class="duration-300 bg-color-base">
         <Navbar class="z-20" />
         <slot class="z-10" />
-        <div class="h-screen"></div>
+        <Foot />
         <button
             class="fixed w-[50px] h-[50px] translate-y-2.5 right-2.5 duration-[400ms] bg-primary hover:bg-primary-focus opacity-0 rounded-xl z-50 hide-totop-btn"
             :class="{ 'opacity-100 show-totop-btn': is_scroll }" id="totop" @click="toTop">
