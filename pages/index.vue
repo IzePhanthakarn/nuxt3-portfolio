@@ -5,7 +5,8 @@
 
 <style scoped>
 .background {
-   background-image: url(hero-background.gif);
+   background-image: url('/hero-background.gif');
+   background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    min-height: 100vh;

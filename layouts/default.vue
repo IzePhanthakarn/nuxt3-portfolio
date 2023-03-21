@@ -4,7 +4,7 @@ const is_scroll = ref(false);
 
 function myScrollFunc() {
     var positionScrollY = window.scrollY;
-    is_scroll.value = positionScrollY <= 20 ? false : true;
+    is_scroll.value = positionScrollY <= 200 ? false : true;
 };
 
 window.addEventListener("scroll", myScrollFunc);
