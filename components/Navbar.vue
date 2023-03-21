@@ -13,6 +13,8 @@ const is_scroll = ref(false);
 // click to open menu sidebar
 function toggleMenu() {
    is_open.value = !is_open.value;
+   console.log(is_open.value);
+
 }
 function closeMenu() {
    is_open.value = false;
@@ -24,7 +26,6 @@ function myScrollFunc() {
 };
 
 window.addEventListener("scroll", myScrollFunc);
-
 </script>
 
 <template>
@@ -40,9 +41,12 @@ window.addEventListener("scroll", myScrollFunc);
                </div>
             </div>
          </div>
-         <div class="absolute z-[0] top-[80px] w-full h-52 flex duration-300 bg-[#171820] border-t-[1px] border-b-[1px] rounded-b-xl border-b-primary border-t-gray-800 drop-shadow-[0_-5px_5px_rgba(255,255,255,0.25)]" :class="{ '-top-32': !is_open }">
+         <div
+            class="absolute z-[0] top-[80px] w-full h-52 flex duration-300 bg-[#171820] border-t-[1px] border-b-[1px] rounded-b-xl border-b-primary border-t-gray-800 drop-shadow-[0_-5px_5px_rgba(255,255,255,0.25)]"
+            :class="{ 'hide': !is_open }">
             <ul class="w-full h-auto grid grid-cols-3 gap-0">
-               <li v-for="(menu, index) in menus" :key="index" @click="toggleMenu()" class="drop-shadow-[0_5px_15px_rgba(255,255,255,0.25)]">
+               <li v-for="(menu, index) in menus" :key="index" @click="toggleMenu()"
+                  class="drop-shadow-[0_5px_15px_rgba(255,255,255,0.25)]">
                   <NuxtLink :to=menu.link class="h-full flex flex-col items-center justify-center p-3 pl-0">
                      <div :class="{ 'text-primary': $route.path == menu.link }">
                         <Icon :name=menu.icon size='30' />
@@ -58,29 +62,7 @@ window.addEventListener("scroll", myScrollFunc);
 </template>
 
 <style scoped>
-.ani-drop {
-   transition: top .3s, border-radius .3s, filter .3s, background-color .3s, height .3s;
-}
-
-.hover-underline-animation {
-   display: inline-block;
-   position: relative;
-}
-
-.hover-underline-animation::after {
-   content: '';
-   position: absolute;
-   width: 100%;
-   transform: scaleX(0);
-   border-radius: 2px;
-   bottom: 0;
-   left: 0;
-   transform-origin: bottom right;
-   transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-   transform: scaleX(1);
-   transform-origin: bottom left;
+.hide{
+   top: -128px;
 }
 </style>
