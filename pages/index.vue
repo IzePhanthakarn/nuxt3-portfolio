@@ -1,6 +1,6 @@
 <template>
-   <div class="background">
-      <HomeHero class="z-0"/>
+   <div class="background z-10">
+      <HomeHero />
    </div>
 </template>
 

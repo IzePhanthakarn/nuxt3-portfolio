@@ -8,7 +8,7 @@ function scrollDown() {
 </script>
 
 <template>
-    <div class="h-screen w-full flex justify-center items-center">
+    <div class="h-screen text-white w-full flex justify-center items-center">
         <div
             class="container h-full px-5 xl:-mt-12 flex flex-col lg:flex-row justify-center lg:justify-around 2xl:justify-between lg:items-center">
             <div class="mt-4 text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-medium">
