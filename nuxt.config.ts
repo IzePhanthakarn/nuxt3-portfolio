@@ -19,8 +19,5 @@ export default defineNuxtConfig({
    },
    ssr: false,
    modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
-   css: ['@/assets/css/main.css'],
-   nitro: {
-      preset: 'netlify'
-   }
+   css: ['@/assets/css/main.css']
 })
