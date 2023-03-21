@@ -2,6 +2,7 @@
    <div class="text-white">
       <HomeHero class="background" />
       <HomeAbout />
+      <HomeExperiences />
    </div>
 </template>
 

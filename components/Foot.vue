@@ -19,7 +19,7 @@
                   size="40"></Icon>
             </Nuxt-Link>
          </div>
-         <div class="w-full sm:w-auto text-center text-sm sm:text-lg my-3 pt-3 sm:my-0 border-t-[1px] sm:border-none border-primary">
+         <div class="w-full sm:w-auto text-center text-sm sm:text-lg my-3 pt-3 sm:pt-0 sm:my-0 border-t-[1px] sm:border-none border-primary">
                Copyright © 2023 <NuxtLink to="/about" class="text-primary hover:underline">IzePhanthakarn</NuxtLink> | All Rights Reserved.
          </div>
          <div class="hidden sm:block">

@@ -11,4 +11,51 @@ html {
 
 ::-webkit-scrollbar {
    width: 0px;
- }
+}
+
+.head {
+   position: relative;
+   text-align: center;
+   font-weight: 600;
+   font-size: 24px;
+   padding-bottom: 20px;
+}
+
+.head::before {
+   content: "";
+   position: absolute;
+   bottom: 15.5px;
+   left: 50%;
+   width: 200%;
+   min-width: 200px;
+   max-width: 250px;
+   height: 3px;
+   border-radius: 1.5px;
+   transform: translateX(-50%);
+   transition: all 0.2s;
+}
+
+.head::after {
+   position: absolute;
+   bottom: 5px;
+   left: 50%;
+   font-size: 16px;
+   white-space: nowrap;
+   padding: 0 5px;
+   transform: translateX(-50%);
+   transition: all 0.2s;
+}
+
+@media (min-width: 640px) {
+   .head {
+      font-size: 32px;
+   }
+
+   .head::after {
+      font-size: 20px;
+   }
+
+   .head::before {
+      bottom: 16.5px;
+   }
+}

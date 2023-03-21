@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Experience } from '~~/assets/interface'
-const experiences: Experience[] = [
+import { homeAbout } from '~~/assets/interface'
+const experiences: homeAbout[] = [
    { year: "04+", line1: "Years", line2: "experience" },
    { year: "06+", line1: "Completed", line2: "projects" },
    { year: "05+", line1: "People", line2: "work with" }
@@ -52,39 +52,7 @@ const experiences: Experience[] = [
 </template>
 
 <style scoped>
-.head {
-   position: relative;
-   text-align: center;
-   font-weight: 600;
-   font-size: 24px;
-   padding-bottom: 20px;
-}
 
-.head::before {
-   content: "";
-   position: absolute;
-   bottom: 15.5px;
-   left: 50%;
-   width: 200%;
-   min-width: 200px;
-   max-width: 250px;
-   height: 3px;
-   border-radius: 1.5px;
-   transform: translateX(-50%);
-   transition: all .2s;
-   /* background: var(--color-primary); */
-}
-
-.head::after {
-   position: absolute;
-   bottom: 5px;
-   left: 50%;
-   font-size: 16px;
-   white-space: nowrap;
-   padding: 0 5px;
-   transform: translateX(-50%);
-   transition: all .2s;
-}
 
 .glass-box {
    background: rgba(255, 255, 255, 0.05);
@@ -103,18 +71,6 @@ const experiences: Experience[] = [
 @media(min-width:640px) {
    .img-about img {
       width: 400px;
-   }
-
-   .head {
-      font-size: 32px;
-   }
-
-   .head::after {
-      font-size: 20px;
-   }
-
-   .head::before {
-      bottom: 16.5px;
    }
 }
 

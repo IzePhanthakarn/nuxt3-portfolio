@@ -3,7 +3,7 @@ const error = useError()
 </script>
 
 <template>
-   <div class="h-screen w-full text-white bg-base flex flex-col items-center justify-center">
+   <div class="h-screen w-full text-white bg-color-base flex flex-col items-center justify-center">
       <!-- <div class="w-full fixed top-0 h-20 bg-red-200"></div> -->
       <Navbar />
       <div class="container flex flex-col lg:flex-row items-center justify-evenly">
