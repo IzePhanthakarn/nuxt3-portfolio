@@ -18,7 +18,7 @@ function toTop() {
 </script>
 
 <template>
-    <div class="duration-300 bg-base text-white">
+    <div class="duration-300 bg-base">
         <Navbar class="z-20" />
         <slot class="z-10" />
         <div class="h-screen"></div>

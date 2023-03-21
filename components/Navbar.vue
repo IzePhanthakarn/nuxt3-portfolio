@@ -29,11 +29,11 @@ window.addEventListener("scroll", myScrollFunc);
 </script>
 
 <template>
-   <div class="w-full h-16 bg-base text-white fixed top-0 duration-300 border-b-[1px] border-b-primary lg:hidden"
+   <div class="w-full h-16 bg-base text-white fixed top-0 duration-300 border-b-[1px] border-b-primary lg:hidden z-40"
       :class="{ 'h-20 lg:bg-transparent ': !is_scroll, 'drop-shadow-none border-none': is_open }">
       <div class="relative h-full w-full">
          <div class="w-full mx-auto h-full px-5 z-[2] absolute bg-base">
-            <div class="w-full h-20 flex items-center justify-between">
+            <div class="w-full h-16 flex items-center justify-between duration-300" :class="{ 'h-20 ': !is_scroll, }">
                <h1 class="text-3xl font-medium">Phanthakarn<span class="text-primary">.dev</span></h1>
                <div>
                   <Icon name="uil:x" v-if="is_open" @click="toggleMenu" />
@@ -42,8 +42,8 @@ window.addEventListener("scroll", myScrollFunc);
             </div>
          </div>
          <div
-            class="absolute z-[0] top-[80px] w-full h-52 flex duration-300 bg-base border-t-[1px] border-b-[1px] rounded-b-xl border-b-primary border-t-gray-800 drop-shadow-[0_-5px_5px_rgba(255,255,255,0.25)]"
-            :class="{ 'hide': !is_open }">
+            class="absolute z-[0] top-[64px] w-full h-48 flex duration-300 bg-base border-t-[1px] border-b-[1px] rounded-b-xl border-b-primary border-t-gray-800 drop-shadow-[0_-5px_5px_rgba(255,255,255,0.25)]"
+            :class="{ 'h-52 top-[80px]': !is_scroll, 'hide': !is_open }">
             <ul class="w-full h-auto grid grid-cols-3 gap-0">
                <li v-for="(menu, index) in menus" :key="index" @click="toggleMenu()"
                   class="drop-shadow-[0_5px_15px_rgba(255,255,255,0.25)]">
@@ -61,7 +61,8 @@ window.addEventListener("scroll", myScrollFunc);
    </div>
 
    <!-- Responsive Navbar -->
-   <div class="w-full h-16 text-white hidden lg:block fixed top-0 bg-base duration-300 border-b-[1px] border-b-primary"
+   <div
+      class="w-full h-16 text-white hidden lg:block fixed top-0 bg-base duration-300 border-b-[1px] border-b-primary z-40"
       :class="{ 'h-20 lg:bg-transparent border-none': !is_scroll, 'drop-shadow-none border-b-gray-800': is_open }">
       <div class="container h-full mx-auto flex items-center justify-between">
          <h1 class="text-4xl font-medium">Phanthakarn<span class="text-primary">.dev</span></h1>
@@ -84,25 +85,24 @@ window.addEventListener("scroll", myScrollFunc);
 }
 
 .hover-underline-animation {
-    display: inline-block;
-    position: relative;
+   display: inline-block;
+   position: relative;
 }
 
 .hover-underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    border-radius: 2px;
-    bottom: 0;
-    left: 0;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   border-radius: 2px;
+   bottom: 0;
+   left: 0;
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
 }
 
 .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+   transform: scaleX(1);
+   transform-origin: bottom left;
 }
-
 </style>

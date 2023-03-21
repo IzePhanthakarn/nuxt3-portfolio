@@ -1,5 +1,6 @@
 <template>
-   <div class="background pt-20">
+   <div class="background z-10">
+      <HomeHero />
    </div>
 </template>
 
