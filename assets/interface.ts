@@ -17,5 +17,12 @@ export interface homeExperience {
    duration: string
    detail: string
    gpa?: string
-   other? : string
+   other?: string
+}
+
+export interface homeSkillTag {
+   icon?: string
+   name: string
+   iconSize?: string
+   link?: string
 }

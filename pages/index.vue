@@ -3,6 +3,7 @@
       <HomeHero class="background" />
       <HomeAbout />
       <HomeExperiences />
+      <HomeSkill />
    </div>
 </template>
 
