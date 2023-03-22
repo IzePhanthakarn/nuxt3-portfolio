@@ -2,7 +2,7 @@
   <NuxtLink :to=link
     class="primary-button 2xl:text-xl py-1.5 px-4 ring-zinc-800 dark:ring-zinc-300 hover:ring hover:ring-primary dark:hover:ring-primary duration-300 rounded-lg flex justify-between items-center cursor-pointer"
     :class="{ 'ring-0 hover:ring-1 hover:ring-zinc-800 dark:hover:ring-zinc-300': secondary, 'ring-2': !secondary, 'py-2.5': secondary && widthScreen >= 1536 && icon == '' }">
-    <Icon v-if="icon != '' && widthScreen >= 1536" :name=icon class="mr-2" size="36" />
+    <Icon v-if="icon != '' && widthScreen >= 1536" :name=icon class="mr-2" :size=iconSize />
     <Icon v-if="icon != '' && widthScreen < 1536" :name=icon class="mr-2" />
     <slot /> <span v-if="arrow"
       class="arrow w-2 h-2 2xl:w-3 2xl:h-3 relative border-r-[2px] border-b-[2px] border-zinc-800 dark:border-zinc-300 before:bg-zinc-800 dark:before:bg-zinc-300"></span>
@@ -26,6 +26,10 @@ const props = defineProps({
   link: {
     type: String,
     default: ''
+  },
+  iconSize:{
+   type: String,
+   default: '24'
   }
 });
 
@@ -78,7 +82,7 @@ const widthScreen = screen.width;
         :icon="icon" viewBox="0 0 512 512" width="20" height="20" />
     </button>
   </template>
-  
+
   <script>
   import baseIcon from './base-icon.vue'
   export default {
