@@ -5,6 +5,7 @@
       <HomeExperiences />
       <HomeSkill />
       <HomePortfolio />
+      <HomeAdvertise />
    </div>
 </template>
 

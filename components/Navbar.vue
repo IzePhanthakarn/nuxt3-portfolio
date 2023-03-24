@@ -3,10 +3,10 @@ import { Menu } from '~~/assets/interface'
 const menus: Menu[] = [
    { name: 'Home', link: '/', icon: 'uil:home-alt' },
    { name: 'About', link: '/about', icon: 'uil:user-square' },
-   { name: 'Experiences', link: '/experiences', icon: 'uil:file-alt' },
-   { name: 'Pricing', link: '/pricing', icon: 'uil:pricetag-alt' },
    { name: 'Portfolio', link: '/portfolio', icon: 'uil:image-v' },
-   { name: 'Contacts', link: '/contacts', icon: 'uil:fast-mail' },
+   { name: 'Pricing', link: '/pricing', icon: 'uil:pricetag-alt' },
+   { name: 'Blogs', link: '/blogs', icon: 'uil:blogger-alt' },
+   { name: 'Web Service', link: '/services', icon: 'uil:shutter-alt' },
 ]
 const is_open = ref(false);
 const is_scroll = ref(false);
