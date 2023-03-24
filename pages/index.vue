@@ -4,6 +4,7 @@
       <HomeAbout />
       <HomeExperiences />
       <HomeSkill />
+      <HomePortfolio />
    </div>
 </template>
 
