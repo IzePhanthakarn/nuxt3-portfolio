@@ -40,7 +40,7 @@ const props = defineProps({
 
             <div class="w-full flex items-center space-x-2">
                <Icon :name=icon size="32" class="text-primary" />
-               <h1 class="my-2 mt-3 text-left text-2xl font-medium">{{ name }}</h1>
+               <h1 class="my-2 mt-3 text-left text-2xl font-medium line-1clamp">{{ name }}</h1>
             </div>
             <hr class="mb-2">
             <p class="line-clamp text-left">{{ description }}</p>
@@ -56,7 +56,7 @@ const props = defineProps({
 
             <hr class="mt-2 mb-1">
             <div class="w-full flex items-center justify-between">
-               <p class="text-lg">{{ lastUpdate }}</p>
+               <p class="text-lg text-gray-500 font-medium">{{ lastUpdate }}</p>
                <BaseButton :to=link tertiary class="w-fit -mr-2 ml-auto py-0">Details</BaseButton>
             </div>
          </div>

@@ -5,6 +5,9 @@
       <HomeExperiences />
       <HomeSkill />
       <HomePortfolio />
+      <HomeAdvertise />
+      <HomePricing />
+      <HomeBlog />
    </div>
 </template>
 

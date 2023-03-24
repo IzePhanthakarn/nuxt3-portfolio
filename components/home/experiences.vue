@@ -40,14 +40,14 @@ const workExps: homeExperience[] = [
 
          <!-- Subtitle Education -->
          <div class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
-            <Icon name="uil-graduation-cap" size="60" />
+            <Icon class="text-primary" name="uil-graduation-cap" size="60" />
             <h1 class="text-4xl mb-1">Education</h1>
          </div>
          <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative"
             v-for="(education, index) in eduExps" :key="index">
             <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
                <div class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
-                  <p>{{ education.year }}</p> <span>( {{ education.duration }} )</span>
+                  <p>{{ education.year }}</p> <span class="text-gray-500">( {{ education.duration }} )</span>
                </div>
                <div class="timeline-info w-full">
                   <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ education.department }}</h1>
@@ -60,14 +60,14 @@ const workExps: homeExperience[] = [
 
          <!-- Subtitle Work -->
          <div class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
-            <Icon name="uil-briefcase-alt" size="55" />
+            <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
             <h1 class="text-4xl mb-1">Work</h1>
          </div>
          <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative"
             v-for="(work, index) in workExps" :key="index">
             <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
                <div class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
-                  <p>{{ work.year }}</p> <span>( {{ work.duration }} )</span>
+                  <p>{{ work.year }}</p> <span class="text-gray-500">( {{ work.duration }} )</span>
                </div>
                <div class="timeline-info w-full">
                   <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ work.department }}</h1>
