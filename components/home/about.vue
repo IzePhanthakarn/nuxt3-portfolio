@@ -41,7 +41,7 @@ const experiences: homeAbout[] = [
                   </div>
                   <div
                      class="my-6 px-2 sm:my-8 flex justify-between sm:justify-start items-center text-lg font-semibold sm:space-x-10">
-                     <base-button icon="line-md:cloud-download-outline-loop" iconSize="30">Resume</base-button>
+                     <base-button icon="line-md:downloading-loop" iconSize="30">Resume</base-button>
                      <base-button secondary link="/about">More</base-button>
                   </div>
                </div>

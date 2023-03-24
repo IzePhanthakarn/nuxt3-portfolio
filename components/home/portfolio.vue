@@ -27,14 +27,14 @@ const softskillTags = [
       ]
    },
    {
-      img: "/img/projects/nuxt2-portfolio.png", name: "My Portfolio Website (Old)", icon: "ph:globe", lastUpdate: "Oct 24, 2022", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
+      img: "/img/projects/nuxt2-portfolio.png", name: "My Portfolio Website (Old version)", icon: "ph:globe", lastUpdate: "Oct 24, 2022", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
          { icon: "logos:nuxt-icon", name: "Nuxt2", link: "https://nuxtjs.org/" },
          { icon: "skill-icons:javascript", name: "JavaScript", iconSize: "20", link: "https://www.w3schools.com/js/" },
          { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
       ]
    },
    {
-      img: "/img/projects/html-portfolio.png", name: "My Portfolio Website (Old)", icon: "ph:globe", lastUpdate: "Dec 31, 2021", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
+      img: "/img/projects/html-portfolio.png", name: "My Portfolio Website (Old version)", icon: "ph:globe", lastUpdate: "Dec 31, 2021", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
          { icon: "vscode-icons:file-type-html", name: "HTML", link: 'https://www.w3schools.com/html/' },
          { icon: "vscode-icons:file-type-css", name: "CSS", link: "https://www.w3schools.com/css/" },
          { icon: "skill-icons:javascript", name: "JavaScript", iconSize: "20", link: "https://www.w3schools.com/js/" },

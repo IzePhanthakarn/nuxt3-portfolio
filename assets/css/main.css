@@ -53,7 +53,7 @@ html {
    overflow: hidden;
  }
 
-.line-clamp1-line {
+.line-1clamp {
    display: -webkit-box;
    -webkit-line-clamp: 1;
    -webkit-box-orient: vertical;

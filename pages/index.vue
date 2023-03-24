@@ -6,6 +6,7 @@
       <HomeSkill />
       <HomePortfolio />
       <HomeAdvertise />
+      <HomePricing />
    </div>
 </template>
 

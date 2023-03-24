@@ -33,3 +33,11 @@ export interface homeProject {
    link: string
    tag: object
 }
+
+export interface homePricing {
+   icon: String
+   name: String
+   price: String
+   checkLists: String[]
+   link: String
+}
