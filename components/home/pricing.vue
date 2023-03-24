@@ -4,25 +4,25 @@ const plans = [
       icon: "fluent:document-page-24-regular",
       name: "Landing Page Website",
       price: "39.99",
-      thPrice:"1,499",
-      checkLists:["Free Design","Free Domain Name","Free support for the first 3 months","Free server fee for the first 3 months","Completed in 7-14 days"],
-      link:"/about"
+      thPrice: "1,499",
+      checkLists: ["Free Design", "Free Domain Name", "Free support for the first 3 months", "Free server fee for the first 3 months", "Completed in 7-14 days"],
+      link: "/about"
    },
    {
       icon: "fluent:document-page-24-regular",
       name: "Multi-Page Website",
       price: "79.99",
-      thPrice:"2,999",
-      checkLists:["Free Design","Free Domain Name","Free 7 web pages","Free support for the first 6 months","Free server fee for the first 6 months","Completed in 15-30 days"],
-      link:"/about"
+      thPrice: "2,999",
+      checkLists: ["Free Design", "Free Domain Name", "Free 7 web pages", "Free support for the first 6 months", "Free server fee for the first 6 months", "Completed in 15-30 days"],
+      link: "/about"
    },
    {
       icon: "fluent:document-page-24-regular",
       name: "Web Application",
       price: "169.99",
-      thPrice:"5,999",
-      checkLists:["Free Design","Free Domain Name","Free 12 web pages","Free 12 Rest APIs","Free support for the first 12 months","Free server for the first 12 months","Free database for the first 12 months.","Completed in 1-3 months"],
-      link:"/about"
+      thPrice: "5,999",
+      checkLists: ["Free Design", "Free Domain Name", "Free 12 web pages", "Free 12 Rest APIs", "Free support for the first 12 months", "Free server for the first 12 months", "Free database for the first 12 months.", "Completed in 1-3 months"],
+      link: "/about"
    }
 ]
 </script>
@@ -35,20 +35,24 @@ const plans = [
                Pricing & Plans</h1>
          </div>
 
-         <div class=" w-full mt-4 grid grid-cols-1 sm:grid-cols-2 xl:flex justify-around gap-10 xl:space-x-10 2xl:space-x-16">
-            <div v-for="(plan,index) in plans" :key="index" class="w-full bg-color-base2 rounded-xl flex z-[5] flex-col justify-between p-3 border-color-base2 border-2 duration-300 hover:border-white" :class="{'relative':index===1}">
-               <div v-if="index===1" class="ribbin"><span class="bg-primary uppercase text-bold">Recommend</span></div>
+         <div
+            class=" w-full mt-4 grid grid-cols-1 sm:grid-cols-2 xl:flex justify-around gap-10 xl:space-x-10 2xl:space-x-16">
+            <div v-for="(plan, index) in plans" :key="index"
+               class="w-full bg-color-base2 rounded-xl flex z-[5] flex-col justify-between p-3 border-color-base2 border-2 duration-300 hover:border-white"
+               :class="{ 'relative': index === 1 }">
+               <div v-if="index === 1" class="ribbin"><span class="bg-primary uppercase text-bold">Recommend</span></div>
                <div class="w-full">
                   <div class="w-full flex items-center space-x-2">
                      <Icon :name=plan.icon class="text-primary" size="60" />
                      <div>
                         <p class="text-lg">{{ plan.name }}</p>
-                        <h1 class="text-3xl font-medium">{{ plan.price }} $ <span class="text-gray-500 text-2xl">( {{plan.thPrice}} ฿ )</span></h1>
+                        <h1 class="text-3xl font-medium">{{ plan.price }} $ <span class="text-gray-500 text-2xl">(
+                              {{ plan.thPrice }} ฿ )</span></h1>
                      </div>
                   </div>
                   <hr class="my-2">
                   <ul class="mt-4">
-                     <li v-for="(checkList,index) in plan.checkLists" :key="index" class="my-1 text-lg">
+                     <li v-for="(checkList, index) in plan.checkLists" :key="index" class="my-1 text-lg">
                         <Icon name="uil:check-circle" class="text-primary" /> {{ checkList }}
                      </li>
                   </ul>
@@ -59,6 +63,7 @@ const plans = [
                </div>
             </div>
          </div>
+         <BaseButton to="/pricing" class="w-fit mr-0 ml-auto mt-8">More</BaseButton>
       </div>
    </div>
 </template>
@@ -71,7 +76,8 @@ const plans = [
 .head::after {
    bottom: 0;
 }
-.ribbin{
+
+.ribbin {
    height: 150px;
    width: 150px;
    position: absolute;
@@ -82,7 +88,7 @@ const plans = [
 }
 
 .ribbin::before,
-.ribbin::after{
+.ribbin::after {
    position: absolute;
    content: "";
    display: block;
@@ -91,17 +97,17 @@ const plans = [
    border-right-color: transparent;
 }
 
-.ribbin::before{
+.ribbin::before {
    bottom: 22px;
    right: 0;
 }
 
-.ribbin::after{
+.ribbin::after {
    top: 0;
    left: 22px;
 }
 
-.ribbin span{
+.ribbin span {
    position: absolute;
    width: 200px;
    padding: 10px 0;
@@ -109,5 +115,4 @@ const plans = [
    top: 25px;
    right: -50px;
    transform: rotate(45deg);
-}
-</style>
+}</style>

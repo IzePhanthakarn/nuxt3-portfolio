@@ -120,4 +120,5 @@ const breakpoints = ref({
 <style scoped>
 .carousel__slide {
    padding: 10px;
-}</style>
+}
+</style>

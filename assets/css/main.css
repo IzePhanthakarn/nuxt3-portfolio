@@ -60,6 +60,13 @@ html {
    overflow: hidden;
  }
 
+.line-4clamp {
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ }
+
 @media (min-width: 640px) {
    .head {
       font-size: 32px;
