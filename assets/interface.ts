@@ -26,3 +26,10 @@ export interface homeSkillTag {
    iconSize?: string
    link?: string
 }
+
+export interface homeProject {
+   name: string
+   description: string
+   link: string
+   tag: object
+}

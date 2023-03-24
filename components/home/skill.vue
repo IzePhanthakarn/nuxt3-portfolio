@@ -143,7 +143,7 @@ const toolTags: homeSkillTag[] = [
 
             <!-- Skillset -->
             <div class="w-full flex flex-col">
-               <div class="w-full py-4 mb-2 flex items-center border-t space-x-2">
+               <div class="w-full pt-4 pb-2 flex items-center border-t space-x-2">
                   <Icon name="carbon:skill-level" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Skillset</h1>
                </div>

@@ -46,6 +46,20 @@ html {
    transition: all 0.2s;
 }
 
+.line-clamp {
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ }
+
+.line-clamp1-line {
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ }
+
 @media (min-width: 640px) {
    .head {
       font-size: 32px;

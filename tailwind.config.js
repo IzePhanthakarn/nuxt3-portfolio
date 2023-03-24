@@ -4,7 +4,8 @@ export default {
     extend: {
       colors: {
         'primary' : "#f13637",
-        'color-base' : "#171820"
+        'color-base' : "#171820",
+        'color-base2' : "#222434"
       },
       keyframes: {
          floaty: {
