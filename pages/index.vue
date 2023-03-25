@@ -8,6 +8,7 @@
       <HomeAdvertise />
       <HomePricing />
       <HomeBlog />
+      <HomeTestimonial />
    </div>
 </template>
 
