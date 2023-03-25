@@ -2,7 +2,7 @@
 const blogs = [
    {
       title: "How to build Nuxt3 project",
-      img: "/img/projects/nuxt3-portfolio.png",
+      img: "/img/blogs/build-nuxt3-project.png",
       tags: [{ icon: "logos:nuxt-icon", name: "Nuxt.js", link: "https://nuxtjs.org/" }],
       detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe soluta ad est ea, asperiores suscipit veniam odit. Tenetur corporis, voluptatem nihil at eaque corrupti officiis unde aut, ducimus, velit dolorem.",
       lastUpdate: "Mar 23, 2023",
@@ -10,7 +10,7 @@ const blogs = [
    },
    {
       title: "How to use tailwind with Nuxt3",
-      img: "/img/projects/nuxt3-portfolio.png",
+      img: "/img/blogs/tailwind-with-nuxt3.png",
       tags: [{ icon: "logos:nuxt-icon", name: "Nuxt.js", link: "https://nuxtjs.org/" },{ icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" }],
       detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe soluta ad est ea, asperiores suscipit veniam odit. Tenetur corporis, voluptatem nihil at eaque corrupti officiis unde aut, ducimus, velit dolorem.",
       lastUpdate: "Mar 23, 2023",
@@ -18,7 +18,7 @@ const blogs = [
    },
    {
       title: "How to use Vue3-Carousel with Nuxt3",
-      img: "/img/projects/nuxt3-portfolio.png",
+      img: "/img/blogs/vue3carousel-with-nuxt3.png",
       tags: [{ icon: "logos:nuxt-icon", name: "Nuxt.js", link: "https://nuxtjs.org/" }],
       detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe soluta ad est ea, asperiores suscipit veniam odit. Tenetur corporis, voluptatem nihil at eaque corrupti officiis unde aut, ducimus, velit dolorem.",
       lastUpdate: "Mar 23, 2023",
@@ -26,7 +26,7 @@ const blogs = [
    },
    {
       title: "How to Deploy Nuxt3 to Netlify",
-      img: "/img/projects/nuxt3-portfolio.png",
+      img: "/img/blogs/deploy-to-netlify.png",
       tags: [{ icon: "logos:nuxt-icon", name: "Nuxt.js", link: "https://nuxtjs.org/" },{ icon: "vscode-icons:file-type-netlify", name: "Netlify", link: "https://www.netlify.com/" }],
       detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe soluta ad est ea, asperiores suscipit veniam odit. Tenetur corporis, voluptatem nihil at eaque corrupti officiis unde aut, ducimus, velit dolorem.",
       lastUpdate: "Mar 23, 2023",

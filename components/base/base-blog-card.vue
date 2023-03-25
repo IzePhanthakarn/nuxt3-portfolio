@@ -31,7 +31,7 @@ const props = defineProps({
    <div
       class="bg-[#222434] h-full flex flex-col p-2.5 pb-1 rounded-xl ring-2 ring-[#222434] hover:ring-2 hover:ring-white">
       <div class="w-full">
-         <img src="/img/projects/nuxt3-portfolio.png" alt="" class="rounded-2xl">
+         <img :src=img alt="" class="rounded-2xl">
       </div>
 
       <div class="w-full px-1 flex flex-col items-start">

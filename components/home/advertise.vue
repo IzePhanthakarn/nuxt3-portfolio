@@ -1,5 +1,5 @@
 <template>
-   <div class="w-full my-4 mb-10 sm:mb-4 lg:mb-0 flex justify-center items-center py-0 lg:py-8">
+   <div class="w-full my-12 sm:mb-4 lg:mb-0 flex justify-center items-center py-0 lg:py-8">
       <div class="container bg-color-base2 border-y-2 sm:border-2 border-primary flex flex-col sm:flex-row sm:rounded-3xl">
          <div class="w-full sm:w-8/12 px-2 sm:px-4 lg:px-8 pt-2 sm:pt-4 lg:pt-8 font-medium text-default">
             <div class="w-full flex items-center space-x-2">
