@@ -46,7 +46,7 @@ function scrollDown() {
             </div>
 
             <div
-                class="w-80 sm:w-[500px] lg:w-96 xl:w-[500px] 2xl:w-[650px] flex justify-center items-center mt-12 mx-auto text-3xl sm:text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
+                class="w-80 -mt-12 sm:w-[500px] lg:w-96 xl:w-[500px] 2xl:w-[650px] flex justify-center items-center mt-12 mx-auto text-3xl sm:text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
                 <img src="/img/hero/me.png" alt=""
                     class="absolute w-5/6 z-10 my-auto animate-floaty">
                 <img src="/img/hero/fire-icon.png" alt="" class="drop-shadow-2xl z-0">
