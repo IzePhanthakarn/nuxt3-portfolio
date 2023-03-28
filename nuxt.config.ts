@@ -26,5 +26,5 @@ export default defineNuxtConfig({
          password: process.env.PASSWORD,
          token: process.env.TOKEN
       }
-   }
+   },
 })
