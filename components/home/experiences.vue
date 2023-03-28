@@ -6,6 +6,7 @@ const eduExps: homeExperience[] = [
       department: "Electricals engineering",
       year: "2019 - 2023",
       duration: "4 years",
+      link:"https://www.su.ac.th/",
       detail: "After graduating from high school, I went on to study electronics and computer systems engineering at Silpakorn University in Nakhon Pathom. I excelled in computer and programming subjects. But the weak point is the subject about electricity.",
       gpa: "3.33"
    },
@@ -14,6 +15,7 @@ const eduExps: homeExperience[] = [
       department: "Science - Math",
       year: "2015 - 2018",
       duration: "3 years",
+      link:"http://www.samchukratana.ac.th/",
       detail: "I studied at Samchuk Rattanaphokaram School near my house in Sam Chuk, Suphanburi. I excelled in Chemistry, English and very fond of computers. The weak point is math and physics. and graduated from there with a 3.13 GPA.",
       gpa: "3.13"
    }
@@ -24,7 +26,8 @@ const workExps: homeExperience[] = [
       department: "Full-stack Developer",
       year: "2022 - 2023",
       duration: "6 months",
-      detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam.",
+      link:"http://aitechnovation.com/",
+      detail: "I have been interning at AI Technovation Ltd. for 6 months as a Back-end Developer. The working environment here is quite flexible as it is a startup company. My responsibilities include communicating with clients, designing web pages, developing both Front-end and Back-end, and working on CI/CD.",
       other: "Internship"
    }
 ]
@@ -41,17 +44,17 @@ const workExps: homeExperience[] = [
          <!-- Subtitle Education -->
          <div class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
             <Icon class="text-primary" name="uil-graduation-cap" size="60" />
-            <h1 class="text-4xl mb-1">Education</h1>
+            <h1 class="text-3xl mb-1">Education</h1>
          </div>
          <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative"
             v-for="(education, index) in eduExps" :key="index">
             <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
                <div class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
-                  <p>{{ education.year }}</p> <span class="text-gray-500">( {{ education.duration }} )</span>
+                  <p>{{ education.year }}</p> <span class="text-gray-200 sm:text-gray-500">( {{ education.duration }} )</span>
                </div>
                <div class="timeline-info w-full">
                   <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ education.department }}</h1>
-                  <h2 class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1">- {{ education.location }}</h2>
+                  <NuxtLink :to=education.link class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1" target="_blank" >- {{ education.location }}</NuxtLink>
                   <p class="my-2 2xl:text-base">{{ education.detail }}</p>
                   <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">GPA : {{ education.gpa }}</span>
                </div>
@@ -61,17 +64,17 @@ const workExps: homeExperience[] = [
          <!-- Subtitle Work -->
          <div class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
             <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
-            <h1 class="text-4xl mb-1">Work</h1>
+            <h1 class="text-3xl mb-1">Work</h1>
          </div>
          <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative"
             v-for="(work, index) in workExps" :key="index">
             <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
                <div class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
-                  <p>{{ work.year }}</p> <span class="text-gray-500">( {{ work.duration }} )</span>
+                  <p>{{ work.year }}</p> <span class="text-gray-200 sm:text-gray-500">( {{ work.duration }} )</span>
                </div>
                <div class="timeline-info w-full">
                   <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ work.department }}</h1>
-                  <h2 class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1">- {{ work.location }}</h2>
+                  <NuxtLink :to=work.link class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1" target="_blank" >- {{ work.location }}</NuxtLink>
                   <p class="my-2 2xl:text-base">{{ work.detail }}</p>
                   <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">{{ work.other }}</span>
                </div>

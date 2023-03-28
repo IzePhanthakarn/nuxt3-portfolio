@@ -16,6 +16,8 @@ export interface homeExperience {
    year: string
    duration: string
    detail: string
+   link: string
+   img?:string
    gpa?: string
    other?: string
 }
