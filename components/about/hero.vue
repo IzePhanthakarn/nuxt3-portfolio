@@ -8,7 +8,7 @@ const experiences: homeAbout[] = [
 </script>
 
 <template>
-    <div class="w-full flex justify-center items-center py-24 lg:py-32 ">
+    <div class="w-full flex justify-center items-center pt-24 lg:pt-32 ">
         <div class="container px-5 flex flex-col justify-center items-center">
 
             <!-- Title -->
