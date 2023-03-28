@@ -17,7 +17,7 @@ export interface homeExperience {
    duration: string
    detail: string
    link: string
-   img?:string
+   img?: string
    gpa?: string
    other?: string
 }
@@ -42,4 +42,15 @@ export interface homePricing {
    price: String
    checkLists: String[]
    link: String
+}
+
+export interface portfolioCard {
+   img: string
+   name: string
+   icon: string
+   lastUpdate: string
+   link: string
+   description: string
+   projectTag: string
+   tags: object
 }
