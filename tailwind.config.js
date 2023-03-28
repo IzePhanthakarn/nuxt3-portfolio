@@ -29,6 +29,9 @@ export default {
          pulse: "pulse 500ms ease infinite alternate",
          pulse2: "pulse 500ms ease infinite alternate 250ms"
        },
+       backgroundImage:{
+        'login-page' : "url('/bg/login-bg.png')"
+       }
     }
   }
 }
