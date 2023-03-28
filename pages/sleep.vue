@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: "loading",
+  layout: false,
 });
 </script>
 
@@ -10,7 +10,7 @@ definePageMeta({
 
 <style scoped>
 .background {
-   background-image: url('/sleep-mode.gif');
+   background-image: url('/bg/sleep-mode.gif');
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;

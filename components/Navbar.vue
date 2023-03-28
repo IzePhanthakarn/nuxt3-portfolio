@@ -13,8 +13,6 @@ const is_scroll = ref(false);
 // click to open menu sidebar
 function toggleMenu() {
    is_open.value = !is_open.value;
-   console.log(is_open.value);
-
 }
 function closeMenu() {
    is_open.value = false;

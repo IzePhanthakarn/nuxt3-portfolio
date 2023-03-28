@@ -19,5 +19,11 @@ export default defineNuxtConfig({
    },
    ssr: false,
    modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
-   css: ['@/assets/css/main.css']
+   css: ['@/assets/css/main.css'],
+   runtimeConfig: {
+      public: {
+         username: process.env.USERNAMEDEV,
+         password: process.env.PASSWORD
+      }
+   }
 })

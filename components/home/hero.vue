@@ -1,12 +1,3 @@
-<script setup lang="ts">
-function scrollDown() {
-    window.scrollTo({
-        top: screen.height - 82,
-        behavior: "smooth"
-    });
-}
-</script>
-
 <template>
     <div class="h-screen text-white w-full flex justify-center items-center">
         <div
@@ -73,8 +64,9 @@ function scrollDown() {
                 </Nuxt-Link>
             </div>
 
-            <div class="hidden sm:flex justify-center items-center space-x-3 cursor-pointer " @click="scrollDown">
-                <p class="text-center text-xl font-bold">SCROLL</p>
+            <div class="hidden sm:flex justify-center items-center space-x-3">
+                <p class="text-center text-xl font-bold">
+                    SCROLL</p>
                 <div
                     class="scrolldown relative border-4 border-primary w-[30px] h-[50px] rounded-full before:content-[''] before:absolute before:bottom-[30px] before:left-1/2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary before:ml-[-3px] before:animate-scrolldown">
                     <div class="chevrons pt-1.5 -ml-1 mt-12 w-[30px] flex flex-col items-center">
@@ -90,6 +82,12 @@ function scrollDown() {
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+console.log(runtimeConfig.public.username);
+
+</script>
 
 <style scoped>
 .waviy span {

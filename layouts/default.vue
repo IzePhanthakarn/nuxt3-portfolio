@@ -19,7 +19,7 @@ function onKeyDown(event: any) {
    event.key === secretCode[index] ? index++ : index = 0;
    console.log(event.key);
    if (secretCode.length === index) {
-      navigateTo('/about')
+      navigateTo('/privatelogin')
    }
 }
 
