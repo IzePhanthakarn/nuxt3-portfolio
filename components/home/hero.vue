@@ -83,12 +83,6 @@
     </div>
 </template>
 
-<script setup lang="ts">
-const runtimeConfig = useRuntimeConfig();
-console.log(runtimeConfig.public.username);
-
-</script>
-
 <style scoped>
 .waviy span {
     display: inline-block;
