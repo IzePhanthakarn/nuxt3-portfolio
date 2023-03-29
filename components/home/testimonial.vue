@@ -46,7 +46,7 @@ const countNumber = countCard();
             </div>
          </div>
          <div class="w-full h-full mt-4 sm:mt-6">
-            <BaseButton to="/testmonials" class="w-fit mr-0 ml-auto"> View more</BaseButton>
+            <BaseButton to="/testimonials" class="w-fit mr-0 ml-auto"> View more</BaseButton>
          </div>
       </div>
    </div>

@@ -2,7 +2,7 @@
 // import { homeProject } from '~~/assets/interface'
 const softskillTags = [
    {
-      img: "/img/projects/nuxt3-portfolio.png", name: "My Portfolio Website", icon: "ph:globe", lastUpdate: "Mar 23, 2023", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project. I am committed to consistently updating the content, whether it be new projects or newly acquired skills that I have learned.", tags: [
+      img: "/img/projects/nuxt3-portfolio.png", name: "My Portfolio Website", icon: "ph:globe", lastUpdate: "Mar 23, 2023", link: "https://github.com/IzePhanthakarn/nuxt3-portfolio", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project. I am committed to consistently updating the content, whether it be new projects or newly acquired skills that I have learned.", tags: [
          { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
          { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "22" },
          { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
@@ -10,31 +10,31 @@ const softskillTags = [
       ]
    },
    {
-      img: "/img/projects/CLI-generating-lorem.png", name: "CLI-generating-lorem", icon: "ph:terminal-window-bold", lastUpdate: "Mar 11, 2023", link: "/about", description: "This is a TypeScript-based CLI to generate Lorem Ipsum text, using a faker to generate the data and a commander to create a command-line interface.", tags: [
+      img: "/img/projects/CLI-generating-lorem.png", name: "CLI-generating-lorem", icon: "ph:terminal-window-bold", lastUpdate: "Mar 11, 2023", link: "https://github.com/IzePhanthakarn/CLI-generating-lorem", description: "This is a TypeScript-based CLI to generate Lorem Ipsum text, using a faker to generate the data and a commander to create a command-line interface.", tags: [
          { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "22" }
       ]
    },
    {
-      img: "/img/projects/cash-book-sheet.png", name: "Cash Book Sheet", icon: "simple-icons:microsoftexcel", lastUpdate: "Mar 8, 2023", link: "/about", description: "The monthly income and expense report includes expenditure categories with basic summarized information such as total expenses, food expenses, shopping expenses, and many others. This sheet was created due to the issue of extravagant spending and the lack of knowledge regarding where the money is being spent. To gain insight into daily expenses, this sheet was developed to track where every penny is being spent.", tags: [
+      img: "/img/projects/cash-book-sheet.png", name: "Cash Book Sheet", icon: "simple-icons:microsoftexcel", lastUpdate: "Mar 8, 2023", link: "https://docs.google.com/spreadsheets/d/1KDk4xL5cMBGHrkF4VPU6I6cUnBYcPP0n4qh3kf_XaQU/edit?usp=drivesdk", description: "The monthly income and expense report includes expenditure categories with basic summarized information such as total expenses, food expenses, shopping expenses, and many others. This sheet was created due to the issue of extravagant spending and the lack of knowledge regarding where the money is being spent. To gain insight into daily expenses, this sheet was developed to track where every penny is being spent.", tags: [
          { icon: "simple-icons:googlesheets", name: "Google Sheet", link: "https://www.google.com/intl/th_th/sheets/about/" }
       ]
    },
    {
-      img: "/img/projects/nuxt3-isv.png", name: "Personal Web Service", icon: "ph:globe", lastUpdate: "Oct 24, 2022", link: "/about", description: "The monthly income and expense report includes expenditure categories with basic summarized information such as total expenses, food expenses, shopping expenses, and many others. This sheet was created due to the issue of extravagant spending and the lack of knowledge regarding where the money is being spent. To gain insight into daily expenses, this sheet was developed to track where every penny is being spent.", tags: [
+      img: "/img/projects/nuxt3-isv.png", name: "UI Dashboard", icon: "ph:globe", lastUpdate: "Oct 24, 2022", link: "https://github.com/IzePhanthakarn/nuxt3-isv", description: "The monthly income and expense report includes expenditure categories with basic summarized information such as total expenses, food expenses, shopping expenses, and many others. This sheet was created due to the issue of extravagant spending and the lack of knowledge regarding where the money is being spent. To gain insight into daily expenses, this sheet was developed to track where every penny is being spent.", tags: [
          { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
          { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "22" },
          { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
       ]
    },
    {
-      img: "/img/projects/nuxt2-portfolio.png", name: "My Portfolio Website (Old version)", icon: "ph:globe", lastUpdate: "Oct 24, 2022", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
+      img: "/img/projects/nuxt2-portfolio.png", name: "My Portfolio Website (Old version)", icon: "ph:globe", lastUpdate: "Oct 24, 2022", link: "https://github.com/IzePhanthakarn/nuxt-portfolio", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
          { icon: "logos:nuxt-icon", name: "Nuxt2", link: "https://nuxtjs.org/" },
          { icon: "skill-icons:javascript", name: "JavaScript", iconSize: "20", link: "https://www.w3schools.com/js/" },
          { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
       ]
    },
    {
-      img: "/img/projects/html-portfolio.png", name: "My Portfolio Website (Old version)", icon: "ph:globe", lastUpdate: "Dec 31, 2021", link: "/about", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
+      img: "/img/projects/html-portfolio.png", name: "My Portfolio Website (Old version)", icon: "ph:globe", lastUpdate: "Dec 31, 2021", link: "https://github.com/IzePhanthakarn/phanthakarns-portfolio", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project.", tags: [
          { icon: "vscode-icons:file-type-html", name: "HTML", link: 'https://www.w3schools.com/html/' },
          { icon: "vscode-icons:file-type-css", name: "CSS", link: "https://www.w3schools.com/css/" },
          { icon: "skill-icons:javascript", name: "JavaScript", iconSize: "20", link: "https://www.w3schools.com/js/" },

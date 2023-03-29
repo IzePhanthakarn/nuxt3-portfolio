@@ -17,7 +17,6 @@ function toTop() {
 
 function onKeyDown(event: any) {
    event.key === secretCode[index] ? index++ : index = 0;
-   console.log(event.key);
    if (secretCode.length === index) {
       navigateTo('/privatelogin')
    }
@@ -29,7 +28,7 @@ window.addEventListener("scroll", myScrollFunc);
 
 <template>
    <div class="duration-300 bg-color-base">
-      <Navbar class="z-20" />
+      <Navbar/>
       <slot class="z-10" />
       <Foot />
       <button

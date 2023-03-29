@@ -9,8 +9,8 @@ const props = defineProps({
       default: ''
    },
    relation: {
-      type: Object,
-      default: []
+      type: String,
+      default: ''
    },
    detail: {
       type: String,
