@@ -80,7 +80,7 @@ const workExps: homeExperience[] = [
                </div>
             </div>
          </div>
-               <BaseButton to="/experiences" class="mt-4 mr-2 ml-auto">More</BaseButton>
+               <BaseButton to="/about" class="mt-4 mr-2 ml-auto">More</BaseButton>
       </div>
    </div>
 </template>

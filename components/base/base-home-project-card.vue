@@ -57,7 +57,7 @@ const props = defineProps({
             <hr class="mt-2 mb-1">
             <div class="w-full flex items-center justify-between">
                <p class="text-lg text-gray-500 font-medium">{{ lastUpdate }}</p>
-               <BaseButton :to=link tertiary class="w-fit -mr-2 ml-auto py-0">Details</BaseButton>
+               <BaseButton :to=link target="_blank" tertiary class="w-fit -mr-2 ml-auto py-0">Details</BaseButton>
             </div>
          </div>
       </div>
