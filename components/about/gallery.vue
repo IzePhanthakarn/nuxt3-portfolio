@@ -63,7 +63,7 @@ function close() {
         <div class="container px-2.5 sm:px-5 flex flex-col justify-center items-center">
 
             <!-- Title -->
-            <div class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
+            <div data-aos="fade" class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
                 <Icon class="text-primary translate-y-0.5" name="material-symbols:gallery-thumbnail-outline-rounded"
                     size="50" />
                 <h1 class="text-3xl mb-1">My Gallery</h1>
@@ -72,7 +72,7 @@ function close() {
             <!-- Gallery -->
             <div class="bg-color-base2 p-2.5 sm:p-4 rounded-2xl columns-2 sm:columns-3 xl:columns-5 gap-2.5 xl:gap-4">
                 <div v-for="(gallery, index) in gallerys.slice(0, numPic)" :key="index">
-                    <img class="rounded-lg mb-2.5 xl:mb-4 cursor-pointer duration-300 hover:brightness-110"
+                    <img data-aos="fade-up" class="rounded-lg mb-2.5 xl:mb-4 cursor-pointer duration-300 hover:brightness-110"
                         :src=gallery.imgUrl @click="show(gallery.imgUrl)" />
                 </div>
             </div>

@@ -41,11 +41,11 @@ const workExps: homeExperience[] = [
         <div class="container px-5 flex flex-col justify-center items-center">
 
             <!-- Subtitle Education -->
-            <div class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
+            <div data-aos="fade" class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
                 <Icon class="text-primary" name="uil-graduation-cap" size="60" />
                 <h1 class="text-4xl mb-1">Education</h1>
             </div>
-            <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative" v-for="(education, index) in eduExps"
+            <div data-aos="fade-right" class="w-full timeline pl-10 sm:pl-0 flex flex-col relative" v-for="(education, index) in eduExps"
                 :key="index">
                 <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
                     <div
@@ -69,11 +69,11 @@ const workExps: homeExperience[] = [
             </div>
 
             <!-- Subtitle Work -->
-            <div class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
+            <div data-aos="fade" class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
                 <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
                 <h1 class="text-4xl mb-1">Work</h1>
             </div>
-            <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative" v-for="(work, index) in workExps"
+            <div data-aos="fade-left" class="w-full timeline pl-10 sm:pl-0 flex flex-col relative" v-for="(work, index) in workExps"
                 :key="index">
                 <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
                     <div

@@ -12,14 +12,14 @@ const experiences: homeAbout[] = [
         <div class="container px-5 flex flex-col justify-center items-center">
 
             <!-- Title -->
-            <div>
+            <div data-aos="fade">
                 <h1 class="head after:content-['who_i_am'] after:bg-color-base before:bg-primary mx-auto">About me</h1>
             </div>
 
             <!-- Block 1 -->
             <div class="w-full lg:mt-12 2xl:mt-10 flex flex-col lg:flex-row justify-center items-center">
                 <!-- Image 1 -->
-                <div class="img-about mx-auto lg:w-4/12">
+                <div data-aos="fade-right" class="img-about mx-auto lg:w-4/12">
                     <img src="/img/me/profileme.jpg" alt="my profile"
                         class="my-[30px] w-[250px] sm:w-[400px] 2xl:w-[500px] drop-shadow-[2px_2px_4px_rgba(255,255,255,0.25)] rounded-[15px] lg:rounded-[30px]">
                 </div>
@@ -27,13 +27,13 @@ const experiences: homeAbout[] = [
                 <!-- Content 1 -->
                 <div class="lg:w-7/12">
                     <div class="w-full flex flex-col">
-                        <h3
+                        <h3 data-aos="fade-left"
                             class="font-semibold text-xl sm:text-xl lg:text-lg xl:text-3xl leading-6 sm:leading-9 lg:leading-7">
                             My name is Phanthakarn Khumphai and <br> I'm a <span class="text-primary">Full Stack
                                 Developer.</span></h3>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
+                        <p data-aos="fade-right" class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
                             I graduated with a bachelor's degree in <a href="https://ee-eng.su.ac.th/" target="_blank"
                             class="text-primary hover:underline decoration-dotted underline-offset-4">Electrical
                             Engineering</a> from <a href="https://www.su.ac.th/" target="_blank"
@@ -46,7 +46,7 @@ const experiences: homeAbout[] = [
                         </p>
 
                         <!-- Paragraph 2 -->
-                        <p class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
+                        <p data-aos="fade-left" class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
                             I am always enjoys learning about new technologies. I strongly believe in reducing global
                             warming, such as by using clean energy sources (like solar cells), and I often use various
                             technologies to solve daily problems. I frequently write or create programs to help with various
@@ -57,7 +57,7 @@ const experiences: homeAbout[] = [
                         </p>
 
                         <!-- Download resume and CV -->
-                        <div
+                        <div data-aos="fade-left"
                             class="my-2.5 px-2 lg:my-4 flex justify-between sm:justify-start items-center text-lg font-semibold sm:space-x-10">
                             <base-button icon="line-md:downloading-loop" iconSize="30">Resume</base-button>
                             <base-button icon="line-md:downloading-loop" secondary link="/about">CV</base-button>
@@ -67,21 +67,21 @@ const experiences: homeAbout[] = [
             </div>
 
             <!-- Block 2 -->
-            <div
+            <div data-aos="fade-up"
                 class="w-full mt-6 lg:mt-12 2xl:mt-10 flex flex-col-reverse lg:flex-row justify-center items-center border-y-[1px] py-2 sm:py-8">
 
                 <!-- Content 2 -->
                 <div class="lg:w-7/12">
                     <div class="w-full flex flex-col">
                         <!-- Paragraph 3 -->
-                        <p class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
+                        <p data-aos="fade-left" class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
                             I possess strong leadership skills, excel at working in a team, proficient in project
                             management, adept at time management, skilled at making confident decisions, and have a knack
                             for resolving issues on the spot.
                         </p>
 
                         <!-- Paragraph 4 -->
-                        <p class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
+                        <p data-aos="fade-right" class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
                             I am comfortable working regular hours, and also have the ability to work overtime if required.
                             I don't like to leave problems unaddressed, and always prefer to tackle them head-on. My dream
                             is to have financial freedom and own a house and car. What I enjoy the most is the satisfaction
@@ -89,7 +89,7 @@ const experiences: homeAbout[] = [
                         </p>
                         
                         <!-- Paragraph 5 -->
-                        <p class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
+                        <p data-aos="fade-left" class="text-sm my-2.5 lg:my-4 sm:text-lg lg:text-tiny 2xl:text-xl text-justify">
                             I have had an internship experience with <a href="http://aitechnovation.com/" target="_blank"
                                 class="text-primary hover:underline decoration-dotted underline-offset-4">AI Technovation
                                 Co.,Ltd.</a> I was assigned the role of a
@@ -103,7 +103,7 @@ const experiences: homeAbout[] = [
                 </div>
 
                 <!-- Image 2 -->
-                <div class="img-about mx-auto lg:w-4/12">
+                <div data-aos="fade-right" class="img-about mx-auto lg:w-4/12">
                     <img src="/img/me/profileme2.jpg" alt="my profile"
                         class="my-[30px] w-[250px] sm:w-[400px] 2xl:w-[500px] drop-shadow-[2px_2px_4px_rgba(255,255,255,0.25)] rounded-[15px] lg:rounded-[30px]">
                 </div>

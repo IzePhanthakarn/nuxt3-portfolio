@@ -66,7 +66,7 @@ const breakpoints = ref({
 <template>
    <div class="w-full my-14 sm:my-0 sm:mb-4 flex justify-center items-center py-0 lg:py-8">
       <div class="container px-5 flex flex-col justify-center items-center">
-         <div>
+         <div data-aos="fade">
             <h1 class="head after:content-['what_i_do'] after:bg-color-base before:bg-primary mx-auto">
                My Portfolio</h1>
          </div>
@@ -74,7 +74,7 @@ const breakpoints = ref({
          <div
             class="w-full mt-4 sm:mt-6 lg:mt-8 xl:mt-10 flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-x-2 lg:gap-x-24">
 
-            <div class="w-full mt-4 flex flex-col items-start justify-between">
+            <div data-aos="fade-up" class="w-full mt-4 flex flex-col items-start justify-between">
                <div class="">
                   <div class="flex items-start space-x-2 mb-2 border-0 sm:border-t pt-0 sm:pt-4">
                      <Icon name="octicon:project-16" size="30" class="mb-2 text-primary" />
@@ -91,19 +91,19 @@ const breakpoints = ref({
                   </p>
                   <BaseButton class="w-fit mt-4" to="/portfolio">More</BaseButton>
                </div>
-                  <div class="flex items-end justify-center space-x-2 mr-0 ml-auto">
-                     <Icon name="uil:angle-left" @click="prev"
-                        class="text-color-base2 border-2 border-color-base2 rounded-full duration-200 hover:cursor-default hover:scale-100 hover:border-color-base2 pointer-events-none"
-                        size="40"
-                        :class="{ 'text-white border-white hover:border-primary  hover:scale-105 hover:cursor-pointer active:scale-95 pointer-events-auto': currentSlide != 0 }" />
-                     <Icon name="uil:angle-right" @click="next"
-                        class="text-color-base2 border-2 border-color-base2 rounded-full duration-200 hover:cursor-default hover:scale-100 hover:border-color-base2 pointer-events-none"
-                        size="40"
-                        :class="{ 'text-white border-white hover:border-primary hover:scale-105 hover:cursor-pointer active:scale-95 pointer-events-auto ': currentSlide != softskillTagsSize - 1 }" />
-                  </div>
+               <div class="flex items-end justify-center space-x-2 mr-0 ml-auto">
+                  <Icon name="uil:angle-left" @click="prev"
+                     class="text-color-base2 border-2 border-color-base2 rounded-full duration-200 hover:cursor-default hover:scale-100 hover:border-color-base2 pointer-events-none"
+                     size="40"
+                     :class="{ 'text-white border-white hover:border-primary  hover:scale-105 hover:cursor-pointer active:scale-95 pointer-events-auto': currentSlide != 0 }" />
+                  <Icon name="uil:angle-right" @click="next"
+                     class="text-color-base2 border-2 border-color-base2 rounded-full duration-200 hover:cursor-default hover:scale-100 hover:border-color-base2 pointer-events-none"
+                     size="40"
+                     :class="{ 'text-white border-white hover:border-primary hover:scale-105 hover:cursor-pointer active:scale-95 pointer-events-auto ': currentSlide != softskillTagsSize - 1 }" />
+               </div>
             </div>
 
-            <div class="lg:col-span-2 mt-2 sm:mt-0">
+            <div data-aos="fade-left" class="lg:col-span-2 mt-2 sm:mt-0">
                <carousel :items-to-show="1" ref="myCarousel" v-model="currentSlide" :breakpoints="breakpoints"
                   :transition="300">
                   <slide v-for="slide in softskillTags" :key="slide">

@@ -30,14 +30,14 @@ const plans = [
 <template>
    <div class="w-full flex justify-center items-center py-0 lg:py-8">
       <div class="container px-5 flex flex-col justify-center items-center">
-         <div class="mb-4">
+         <div data-aos="fade" class="mb-4">
             <h1 class="head after:content-['choose_your_plan'] after:bg-color-base before:bg-primary mx-auto">
                Pricing & Plans</h1>
          </div>
 
          <div
             class=" w-full mt-4 grid grid-cols-1 sm:grid-cols-2 xl:flex justify-around gap-10 xl:space-x-10 2xl:space-x-16">
-            <div v-for="(plan, index) in plans" :key="index"
+            <div data-aos="fade-up" v-for="(plan, index) in plans" :key="index"
                class="w-full bg-color-base2 rounded-xl flex z-[5] flex-col justify-between p-3 border-color-base2 border-2 duration-300 hover:border-white"
                :class="{ 'relative': index === 1 }">
                <div v-if="index === 1" class="ribbin"><span class="bg-primary uppercase text-bold">Recommend</span></div>
@@ -63,7 +63,7 @@ const plans = [
                </div>
             </div>
          </div>
-         <BaseButton to="/pricing" class="w-fit mr-0 ml-auto mt-8">More</BaseButton>
+         <BaseButton data-aos="fade-left" to="/pricing" class="w-fit mr-0 ml-auto mt-8">More</BaseButton>
       </div>
    </div>
 </template>

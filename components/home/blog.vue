@@ -52,18 +52,18 @@ const countNumber = countCard();
 <template>
    <div class="w-full my-4 lg:my-0 flex justify-center items-center py-0 lg:py-8">
       <div class="container px-5 flex flex-col justify-center items-center">
-         <div class="my-4 lg:mt-0">
+         <div data-aos="fade" class="my-4 lg:mt-0">
             <h1 class="head after:content-['what_i_write'] after:bg-color-base before:bg-primary mx-auto">
                My Blogs</h1>
          </div>
 
-         <div class="w-full h-full mt-4 sm:mt-6 overflow-hidden lg:mt-8 p-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+         <div data-aos="fade-up" class="w-full h-full mt-4 sm:mt-6 overflow-hidden lg:mt-8 p-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             <div v-for="slide in blogs.slice(0, countNumber)" :key="slide">
                <BaseBlogCard :title=slide.title :img=slide.img :tags=slide.tags :detail=slide.detail
                   :lastUpdate=slide.lastUpdate :link=slide.link />
             </div>
          </div>
-         <BaseButton to="/blogs" class="w-fit mr-0 ml-auto mt-8">More</BaseButton>
+         <BaseButton data-aos="fade-left" to="/blogs" class="w-fit mr-0 ml-auto mt-8">More</BaseButton>
       </div>
    </div>
 </template>

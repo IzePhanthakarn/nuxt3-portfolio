@@ -61,7 +61,7 @@ const toolTags: homeSkillTag[] = [
             class="w-full mt-5 sm:mt-4 lg:mt-6 flex flex-col divide-y sm:grid sm:grid-rows-3 lg:grid-rows-2 grid-flow-col gap-8">
 
             <!-- Skillset -->
-            <div class="w-full flex flex-col">
+            <div data-aos="fade-up" class="w-full flex flex-col">
                <div class="w-full pt-4 pb-2 flex items-center border-t space-x-2">
                   <Icon name="carbon:skill-level" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Skillset</h1>
@@ -73,7 +73,7 @@ const toolTags: homeSkillTag[] = [
             </div>
 
             <!-- Soft Skill -->
-            <div class="w-full">
+            <div data-aos="fade-up" class="w-full">
                <div class="w-full mt-4 mb-2 flex items-center space-x-2">
                   <Icon name="material-symbols:mindfulness-outline-rounded" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Soft Skill</h1>
@@ -84,7 +84,7 @@ const toolTags: homeSkillTag[] = [
             </div>
 
             <!-- Front-end -->
-            <div class="w-full">
+            <div data-aos="fade-up" class="w-full">
                <div class="w-full mt-4 mb-2 flex items-center space-x-2">
                   <Icon name="material-symbols:flip-to-front" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Front-end</h1>
@@ -95,7 +95,7 @@ const toolTags: homeSkillTag[] = [
             </div>
 
             <!-- Back-end -->
-            <div class="w-full">
+            <div data-aos="fade-up" class="w-full">
                <div class="w-full mt-4 mb-2 flex items-center space-x-2">
                   <Icon name="uil:database" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Back-end</h1>
@@ -106,7 +106,7 @@ const toolTags: homeSkillTag[] = [
             </div>
 
             <!-- Services -->
-            <div class="w-full">
+            <div data-aos="fade-up" class="w-full">
                <div class="w-full mt-4 mb-2 flex items-center space-x-2">
                   <Icon name="ic:baseline-miscellaneous-services" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Services</h1>
@@ -117,7 +117,7 @@ const toolTags: homeSkillTag[] = [
             </div>
 
             <!-- Tools -->
-            <div class="w-full">
+            <div data-aos="fade-up" class="w-full">
                <div class="w-full mt-4 mb-2 flex items-center space-x-2">
                   <Icon name="codicon:tools" size="35" class="text-primary" />
                   <h1 class="text-3xl font-medium">Tools</h1>

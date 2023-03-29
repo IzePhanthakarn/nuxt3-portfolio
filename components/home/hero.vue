@@ -2,7 +2,7 @@
     <div class="h-screen text-white w-full flex justify-center items-center">
         <div
             class="container h-full px-5 xl:-mt-12 flex flex-col lg:flex-row justify-center lg:justify-around 2xl:justify-between lg:items-center">
-            <div class="mt-4 text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-medium">
+            <div data-aos="fade-right" class="mt-4 text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-medium">
                 <h1>Hello, my name is </h1>
                 <h2 class="-my-1 sm:my-0.5 xl:my-1 text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-semibold">Phanthakarn
                     Khumphai
@@ -36,7 +36,7 @@
                     to="/about">About me</NuxtLink>
             </div>
 
-            <div
+            <div data-aos="fade-left"
                 class="w-80 -mt-12 sm:w-[500px] lg:w-96 xl:w-[500px] 2xl:w-[650px] flex justify-center items-center mt-12 mx-auto text-3xl sm:text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
                 <img src="/img/hero/me.png" alt=""
                     class="absolute w-5/6 z-10 my-auto animate-floaty">
