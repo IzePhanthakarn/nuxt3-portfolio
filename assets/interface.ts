@@ -54,3 +54,9 @@ export interface portfolioCard {
    projectTag: string
    tags: object
 }
+
+export interface faqAccording {
+   title: string
+   isShow: boolean
+   description: string
+}

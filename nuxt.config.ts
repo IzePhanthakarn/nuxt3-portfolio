@@ -15,7 +15,9 @@ export default defineNuxtConfig({
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap' }
          ],
          style: [],
-      }
+      },
+      pageTransition: { name: 'page', mode: 'out-in' },
+      layoutTransition: { name: 'layout', mode: 'out-in' }
    },
    ssr: false,
    modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],

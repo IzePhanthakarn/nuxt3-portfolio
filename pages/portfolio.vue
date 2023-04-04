@@ -58,12 +58,12 @@ function select(tag: string) {
         <div class="container mx-auto px-5 flex flex-col justify-center items-center">
 
             <!-- Title -->
-            <div>
+            <div data-aos="fade">
                 <h1 class="head after:content-['what_i_do'] after:bg-color-base before:bg-primary mx-auto">Portfolio</h1>
             </div>
 
             <!-- Search box -->
-            <div class="w-full 2xl:w-11/12 mt-4 sm:mt-8 text-black font-semibold">
+            <div data-aos="fade" class="w-full 2xl:w-11/12 mt-4 sm:mt-8 text-black font-semibold">
                 <form class="form w-full px-3.5 h-10 relative flex items-center bg-white before:bg-primary"
                     onsubmit="return false;">
                     <button class="flex items-center space-x-3 border-0 bg-transparent text-[#8b8ba7]">
@@ -78,7 +78,7 @@ function select(tag: string) {
                 </form>
             </div>
 
-            <div class="w-full 2xl:w-11/12 mt-4 hidden sm:block">
+            <div data-aos="fade-left" class="w-full 2xl:w-11/12 mt-4 hidden sm:block">
                 <ul class="flex h-10 items-center space-x-2">
                     <li class="h-full flex items-center px-6 rounded-full bg-color-base border-2 cursor-pointer duration-300 hover:scale-105 active:scale-95"
                         :class="{ 'border-primary': tagSelected === tag }" v-for="(tag, index) in tagList" :key="index"
@@ -86,7 +86,7 @@ function select(tag: string) {
                 </ul>
             </div>
 
-            <div class="w-full mt-4 bg-color-base-2 block sm:hidden">
+            <div data-aos="fade-left" class="w-full mt-4 bg-color-base-2 block sm:hidden">
                 <select v-model="tagSelected" name="" id="" class="w-full bg-color-base2 px-4 py-1 rounded-lg">
                     <option v-for="(tag, index) in tagList" :key="index" :value=tag>{{ tag }}</option>
                 </select>
@@ -105,9 +105,10 @@ function select(tag: string) {
 </template>
 
 <style scoped>
-.min-height{
+.min-height {
     min-height: calc(100vh - 63px);
 }
+
 .form {
     border-radius: 30px;
     transition: border-radius 0.5s ease;
@@ -148,4 +149,5 @@ input:focus {
 input:not(:placeholder-shown)~.reset {
     opacity: 1;
     visibility: visible;
-}</style>
+}
+</style>

@@ -1,13 +1,13 @@
 <template>
    <div class="w-full flex justify-center items-center py-0 pb-4 lg:py-8 xl:py-4">
       <div class="container px-5 flex flex-col justify-center items-center">
-         <div>
+         <div data-aos="fade">
             <h1 class="head after:content-['get_in_touch'] after:bg-color-base before:bg-primary mx-auto">
                Contacts</h1>
          </div>
          <div class="w-full mt-8 flex flex-col lg:flex-row justify-between items-center">
-            <img class="w-full lg:w-2/5" src="/img/contact.gif" alt="">
-            <div class="w-full lg:w-3/5 lg:pl-40 flex flex-col items-center justify-start">
+            <img data-aos="fade-right" class="w-full lg:w-2/5" src="/img/contact.gif" alt="">
+            <div data-aos="fade-left" class="w-full lg:w-3/5 lg:pl-40 flex flex-col items-center justify-start">
                <div class="w-full flex space-x-4 items-center">
                   <Icon name="uil:fast-mail" size="60" class="text-primary" />
                   <h1 class="text-3xl sm:text-4xl font-semibold">Get in touch</h1>

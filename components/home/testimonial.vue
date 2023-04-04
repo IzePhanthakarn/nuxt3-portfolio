@@ -35,17 +35,17 @@ const countNumber = countCard();
 <template>
    <div class="w-full flex justify-center items-center py-0 lg:py-8 xl:py-4">
       <div class="container px-5 flex flex-col justify-center items-center">
-         <div>
+         <div data-aos="fade">
             <h1 class="head after:content-['what_people_say'] after:bg-color-base before:bg-primary mx-auto">
                Testimonials</h1>
          </div>
-         <div
+         <div data-aos="fade-up"
             class="w-full h-full mt-4 sm:mt-6 overflow-hidden lg:mt-8 p-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div v-for="(testimonail,index) in testimonials" :key="index">
                <BaseHomeTestimonial :name=testimonail.name :img=testimonail.img :relation=testimonail.relation :detail=testimonail.detail :lastUpdate=testimonail.lastUpdate :score=testimonail.score />
             </div>
          </div>
-         <div class="w-full h-full mt-4 sm:mt-6">
+         <div data-aos="fade-left" class="w-full h-full mt-4 sm:mt-6">
             <BaseButton to="/testimonials" class="w-fit mr-0 ml-auto"> View more</BaseButton>
          </div>
       </div>

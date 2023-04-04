@@ -63,7 +63,7 @@ function close() {
         <div class="container px-2.5 sm:px-5 flex flex-col justify-center items-center">
 
             <!-- Title -->
-            <div class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
+            <div data-aos="fade" class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
                 <Icon class="text-primary translate-y-0.5" name="material-symbols:gallery-thumbnail-outline-rounded"
                     size="50" />
                 <h1 class="text-3xl mb-1">My Gallery</h1>
@@ -72,7 +72,7 @@ function close() {
             <!-- Gallery -->
             <div class="bg-color-base2 p-2.5 sm:p-4 rounded-2xl columns-2 sm:columns-3 xl:columns-5 gap-2.5 xl:gap-4">
                 <div v-for="(gallery, index) in gallerys.slice(0, numPic)" :key="index">
-                    <img class="rounded-lg mb-2.5 xl:mb-4 cursor-pointer duration-300 hover:brightness-110"
+                    <img data-aos="fade-up" class="rounded-lg mb-2.5 xl:mb-4 cursor-pointer duration-300 hover:brightness-110"
                         :src=gallery.imgUrl @click="show(gallery.imgUrl)" />
                 </div>
             </div>
@@ -87,7 +87,7 @@ function close() {
             class="prevent-box bg-color-base2 border-2 border-color-base w-11/12 sm:w-2/3 lg:w-auto px-2.5 text-default font-medium"
             :class="{ 'active': isOpen }">
             <div class="flex justify-end mr-0">
-                <Icon name="uil:x" class="my-2 mr-1 cursor-pointer" @click="close">close</Icon>
+                <Icon name="uil:x" class="my-2 mr-1 cursor-pointer duration-100 hover:text-primary" @click="close">close</Icon>
             </div>
             <img class="rounded-lg drop-shadow-md" :src=focusImg>
             <div class="w-full my-3 flex justify-start items-center space-x-1 sm:space-x-4">
