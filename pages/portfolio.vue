@@ -94,7 +94,7 @@ function select(tag: string) {
 
             <div
                 class="w-full 2xl:w-11/12 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 border-t-2 py-4">
-                <div data-aos="fade-up" v-for="(slide, index) in softskillTags" :key="index" class="duration-300 scale-1 opacity-1"
+                <div v-for="(slide, index) in softskillTags" :key="index" class="duration-300 scale-1 opacity-1"
                     :class="{ 'hidden opacity-0 scale-90': slide.projectTag != tagSelected && tagSelected != 'All', 'hidden': !slide.name.includes(searchName) }">
                     <BaseHomeProjectCard :name=slide.name :lastUpdate=slide.lastUpdate :description=slide.description
                         :link=slide.link :img=slide.img :icon=slide.icon :tags="slide.tags" />

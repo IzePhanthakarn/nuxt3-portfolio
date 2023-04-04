@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const plans = [
    {
       icon: "fluent:document-page-24-regular",
@@ -6,23 +6,23 @@ const plans = [
       price: "39.99",
       thPrice: "1,499",
       checkLists: ["Free Design", "Free Domain Name", "Free support for the first 3 months", "Free server fee for the first 3 months", "Completed in 7-14 days"],
-      link: "/about"
+      link: "/pricing/landing-page"
    },
    {
-      icon: "fluent:document-page-24-regular",
+      icon: "fluent:document-copy-24-regular",
       name: "Multi-Page Website",
       price: "79.99",
       thPrice: "2,999",
       checkLists: ["Free Design", "Free Domain Name", "Free 7 web pages", "Free support for the first 6 months", "Free server fee for the first 6 months", "Completed in 15-30 days"],
-      link: "/about"
+      link: "/pricing/multi-page"
    },
    {
-      icon: "fluent:document-page-24-regular",
+      icon: "mdi:application-brackets-outline",
       name: "Web Application",
       price: "169.99",
       thPrice: "5,999",
       checkLists: ["Free Design", "Free Domain Name", "Free 12 web pages", "Free 12 Rest APIs", "Free support for the first 12 months", "Free server for the first 12 months", "Free database for the first 12 months.", "Completed in 1-3 months"],
-      link: "/about"
+      link: "/pricing/web-application"
    }
 ]
 </script>

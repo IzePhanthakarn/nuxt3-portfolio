@@ -87,7 +87,7 @@ function close() {
             class="prevent-box bg-color-base2 border-2 border-color-base w-11/12 sm:w-2/3 lg:w-auto px-2.5 text-default font-medium"
             :class="{ 'active': isOpen }">
             <div class="flex justify-end mr-0">
-                <Icon name="uil:x" class="my-2 mr-1 cursor-pointer" @click="close">close</Icon>
+                <Icon name="uil:x" class="my-2 mr-1 cursor-pointer duration-100 hover:text-primary" @click="close">close</Icon>
             </div>
             <img class="rounded-lg drop-shadow-md" :src=focusImg>
             <div class="w-full my-3 flex justify-start items-center space-x-1 sm:space-x-4">
