@@ -20,6 +20,10 @@ export default defineNuxtConfig({
       layoutTransition: { name: 'layout', mode: 'out-in' }
    },
    ssr: false,
+   devServer:{
+      host:'0.0.0.0',
+      port:3000,
+   },
    modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
    css: ['@/assets/css/main.css'],
    runtimeConfig: {
