@@ -1,13 +1,13 @@
 <template>
-    <div class="w-full flex justify-center items-center py-0 mt-8 lg:py-8 border-t-2 border-white">
+    <div class="w-full flex justify-center items-center py-8 mt-8 border-t-2 border-white">
         <div class="container flex flex-col justify-center items-center">
 
             <div data-aos="fade-right" class="w-full bg-color-base2 p-4 rounded-2xl">
                 <div class="w-full flex items-center space-x-1">
                     <Icon name="fluent:document-page-24-regular" size="40" class="text-primary" />
-                    <h1 class="text-3xl font-medium">What is Landing page?</h1>
+                    <h1 class="text-2xl sm:text-3xl font-medium">What is Landing page?</h1>
                 </div>
-                <p class="text-lg border-t border-white mt-4 pt-4">A landing page is a specific webpage created with a
+                <p class="text-base sm:text-lg border-t border-white mt-2 sm:mt-4 pt-2 sm:pt-4">A landing page is a specific webpage created with a
                     singular purpose in mind. It is designed to fulfill a
                     specific goal, such as sharing news or promoting a product or service. In essence, a landing page is
                     built to answer a particular need or question that a potential customer or user may have.
@@ -27,9 +27,9 @@
             <div data-aos="fade-left" class="w-full bg-color-base2 p-4 rounded-2xl mt-8">
                 <div class="w-full flex items-center space-x-1">
                     <Icon name="fluent:document-copy-24-regular" size="40" class="text-primary" />
-                    <h1 class="text-3xl font-medium">What is Multi-page?</h1>
+                    <h1 class="text-2xl sm:text-3xl font-medium">What is Multi-page?</h1>
                 </div>
-                <p class="text-lg border-t border-white mt-4 pt-4">Multi Page refers to the website structure designed in
+                <p class="text-base sm:text-lg border-t border-white mt-2 sm:mt-4 pt-2 sm:pt-4">Multi Page refers to the website structure designed in
                     sections separated by their respective page functions, such as index, login, dashboard, etc. When the
                     path changes, the server renders new data and displays it.
 
@@ -49,9 +49,9 @@
             <div data-aos="fade-right" class="w-full bg-color-base2 p-4 rounded-2xl mt-8">
                 <div class="w-full flex items-center space-x-1">
                     <Icon name="mdi:application-brackets-outline" size="40" class="text-primary" />
-                    <h1 class="text-3xl font-medium">What is Web Application?</h1>
+                    <h1 class="text-2xl sm:text-3xl font-medium">What is Web Application?</h1>
                 </div>
-                <p class="text-lg border-t border-white mt-4 pt-4">A web application is an app that is written to be
+                <p class="text-base sm:text-lg border-t border-white mt-2 sm:mt-4 pt-2 sm:pt-4">A web application is an app that is written to be
                     directly accessed through a web browser without the need to download a full-fledged application onto a
                     device. As a result, it generally consumes relatively low resources, can be quickly accessed, and is
                     typically optimized to run faster than a regular app. This makes the interface friendly and

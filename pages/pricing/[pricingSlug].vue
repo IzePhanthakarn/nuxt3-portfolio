@@ -54,7 +54,7 @@ const totalTH: any = computed(() => {
 </script>
 
 <template>
-    <div class="container text-white mx-auto pt-24 pb-10 height-scree">
+    <div class="container text-white mx-auto pt-24 px-5 pb-10 height-scree">
 
         <!-- Title -->
         <div data-aos="fade-right" class="w-full flex items-center justify-between">
@@ -69,8 +69,8 @@ const totalTH: any = computed(() => {
             </div>
         </div>
 
-        <div class="w-full h-full mt-4 grid grid-cols-2 gap-8">
-            <div class="w-full h-full bg-color-base2 rounded-3xl p-3">
+        <div class="w-full h-full mt-4 grid grid-cols-2 gap-4 sm:gap-8">
+            <div class="w-full col-span-2 sm:col-span-1 h-full bg-color-base2 rounded-3xl p-3">
                 <div class="w-full flex items-center space-x-2">
                     <Icon name="fluent:document-page-24-regular" class="text-primary" size="60" />
                     <div>
@@ -90,10 +90,10 @@ const totalTH: any = computed(() => {
                 </ul>
 
             </div>
-            <div class="w-full h-[340px] flex flex-col justify-between">
-                <div class="w-full h-full flex flex-col space-y-8">
+            <div class="w-full col-span-2 sm:col-span-1 sm:h-[340px] flex flex-col justify-between">
+                <div class="w-full sm:h-full flex flex-col space-y-4 sm:space-y-8">
 
-                    <div class="w-full h-full flex flex-col justify-center bg-color-base2 rounded-2xl p-5">
+                    <div class="w-full h-auto sm:h-full flex flex-col justify-center bg-color-base2 rounded-2xl p-3 sm:p-5">
                         <div class="w-full flex items-end justify-between space-x-2 border-b-2 pb-3">
                             <div class="flex items-center space-x-2">
                                 <Icon name="line-md:sun-rising-loop" size="30" class="text-primary" />
@@ -108,7 +108,7 @@ const totalTH: any = computed(() => {
                         </div>
                     </div>
 
-                    <div class="w-full h-full flex flex-col justify-center bg-color-base2 rounded-2xl p-5">
+                    <div class="w-full h-auto sm:h-full flex flex-col justify-center bg-color-base2 rounded-2xl p-3 sm:p-5">
                         <div class="w-full flex items-end justify-between space-x-2 border-b-2 pb-3">
                             <div class="flex items-center space-x-2">
                                 <Icon name="bi:translate" size="30" class="text-primary" />
@@ -130,7 +130,7 @@ const totalTH: any = computed(() => {
                 class="w-full bg-color-base2 rounded-2xl p-5 pb-0 col-span-2 grid grid-cols-3 gap-x-8">
                 <h1 class="mb-4 text-2xl font-medium col-span-3">Your Information</h1>
 
-                <div class="login__box grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
+                <div class="login__box mt-2 col-span-3 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                     <Icon name="uil:user" class="login__icon" size="32" />
                     <div class="relative">
                         <input type="text" v-model="name"
@@ -140,7 +140,7 @@ const totalTH: any = computed(() => {
                     </div>
                 </div>
 
-                <div class="login__box grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
+                <div class="login__box mt-7 col-span-3 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                     <Icon name="line-md:email" class="login__icon" size="36" />
                     <div class="relative">
                         <input type="email" v-model="email"
@@ -150,7 +150,7 @@ const totalTH: any = computed(() => {
                     </div>
                 </div>
 
-                <div class="login__box grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
+                <div class="login__box mt-7 col-span-3 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                     <Icon name="uil:phone" class="login__icon" size="32" />
                     <div class="relative">
                         <input type="tell" v-model="phone"
@@ -166,12 +166,12 @@ const totalTH: any = computed(() => {
                         spellcheck=false></textarea>
                 </div>
 
-                <div class="w-full col-span-2 bg-color-base2 rounded-2xl p-5 flex items-center space-x-2">
+                <div class="w-full col-span-3 sm:col-span-2 bg-color-base2 rounded-2xl p-5 pl-0 lg:pl-5 flex items-center space-x-2">
                     <h1 class="text-2xl mt-0.5">Total: </h1>
                     <p class="text-3xl font-medium">{{ total }} $ <span class="text-gray-500 text-2xl">( {{ totalTH }} ฿
                             )</span></p>
                 </div>
-                <div class="w-full flex items-center justify-end">
+                <div class="w-full mb-4 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end">
                     <button type="submit" class="px-2.5 py-1.5 border-2 rounded-xl text-lg flex items-center overflow-hidden duration-300 hover:border-primary">
                         <div class="svg-wrapper-1">
                             <div class="svg-wrapper">
