@@ -54,7 +54,7 @@ const totalTH: any = computed(() => {
 </script>
 
 <template>
-    <div class="container text-white mx-auto pt-24 px-5 pb-10 height-scree">
+    <div class="container text-white mx-auto pt-24 px-5 pb-10">
 
         <!-- Title -->
         <div data-aos="fade-right" class="w-full flex items-center justify-between">

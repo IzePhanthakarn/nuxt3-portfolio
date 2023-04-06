@@ -27,7 +27,7 @@ window.addEventListener("scroll", myScrollFunc);
 </script>
 
 <template>
-   <div class="duration-300 bg-color-base overflow-hidden">
+   <div class="duration-300 bg-color-base overflow-hidden select-none">
       <Navbar/>
       <slot class="z-10" />
       <Foot />
