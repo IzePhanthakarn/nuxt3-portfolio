@@ -1,6 +1,7 @@
 export interface Menu {
    name: string
    link: string
+   activeLink: string[]
    icon: string
 }
 

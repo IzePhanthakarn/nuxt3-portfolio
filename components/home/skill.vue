@@ -19,7 +19,7 @@ const frontendTags: homeSkillTag[] = [
    { icon: "vscode-icons:file-type-node", name: "Node.js", link: "https://nodejs.org/en" },
    { icon: "vscode-icons:file-type-vue", name: "Vue.js", link: "https://vuejs.org/" },
    { icon: "logos:nuxt-icon", name: "Nuxt.js", link: "https://nuxtjs.org/" },
-   { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+   { icon: "logos:tailwindcss-icon", name: "TailwindCSS", link: "https://tailwindcss.com/" },
    { icon: "skill-icons:bootstrap", name: "Bootstrap", link: "https://getbootstrap.com/" }
 ]
 const backendTags: homeSkillTag[] = [

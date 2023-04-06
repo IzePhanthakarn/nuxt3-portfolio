@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { Menu } from '~~/assets/interface'
 const menus: Menu[] = [
-   { name: 'Home', link: '/', icon: 'uil:home-alt' },
-   { name: 'About', link: '/about', icon: 'uil:user-square' },
-   { name: 'Portfolio', link: '/portfolio', icon: 'uil:image-v' },
-   { name: 'Pricing', link: '/pricing', icon: 'uil:pricetag-alt' },
-   { name: 'Blogs', link: '/blogs', icon: 'uil:blogger-alt' },
-   { name: 'Web Service', link: '/services', icon: 'uil:shutter-alt' },
+   { name: 'Home', link: '/', activeLink: ['/'], icon: 'uil:home-alt' },
+   { name: 'About', link: '/about', activeLink: ['/about'], icon: 'uil:user-square' },
+   { name: 'Portfolio', link: '/portfolio', activeLink: ['/portfolio'], icon: 'uil:image-v' },
+   { name: 'Pricing', link: '/pricing', activeLink: ['/pricing', '/pricing/landing-page', '/pricing/multi-page', '/pricing/web-application'], icon: 'uil:pricetag-alt' },
+   { name: 'Blogs', link: '/blogs', activeLink: ['/blogs'], icon: 'uil:blogger-alt' },
+   { name: 'Web Service', link: '/services', activeLink: ['/services'], icon: 'uil:shutter-alt' },
 ]
 const is_open = ref(false);
 const is_scroll = ref(false);
@@ -27,7 +27,8 @@ window.addEventListener("scroll", myScrollFunc);
 </script>
 
 <template>
-   <div class="w-full h-16 bg-color-base text-white fixed top-0 duration-300 border-b-[1px] border-b-primary lg:hidden z-40"
+   <div
+      class="w-full h-16 bg-color-base text-white fixed top-0 duration-300 border-b-[1px] border-b-primary lg:hidden z-40"
       :class="{ 'h-20 lg:bg-transparent ': !is_scroll, 'drop-shadow-none border-none': is_open }">
       <div class="relative h-full w-full">
          <div class="w-full mx-auto h-full px-5 z-[2] absolute bg-color-base">
@@ -46,10 +47,10 @@ window.addEventListener("scroll", myScrollFunc);
                <li v-for="(menu, index) in menus" :key="index" @click="toggleMenu()"
                   class="drop-shadow-[0_5px_15px_rgba(255,255,255,0.25)]">
                   <NuxtLink :to=menu.link class="h-full flex flex-col items-center justify-center p-3 pl-0">
-                     <div :class="{ 'text-primary': $route.path == menu.link }">
+                     <div :class="{ 'text-primary': menu.activeLink.includes($route.path) }">
                         <Icon :name=menu.icon size='30' />
                      </div>
-                     <p class="font-semibold" :class="{ 'text-primary': $route.path == menu.link }">
+                     <p class="font-semibold" :class="{ 'text-primary': menu.activeLink.includes($route.path) }">
                         {{ menu.name }}</p>
                   </NuxtLink>
                </li>
@@ -66,9 +67,9 @@ window.addEventListener("scroll", myScrollFunc);
          <h1 class="text-4xl font-medium">Phanthakarn<span class="text-primary">.dev</span></h1>
          <ul class="w-full flex items-center justify-evenly text-xl">
             <li v-for="(menu, index) in menus" :key="index">
-               <NuxtLink :to="menu.link" :class="{ 'text-primary': $route.path == menu.link }">
+               <NuxtLink :to="menu.link" :class="{ 'text-primary': menu.activeLink.includes($route.path) }">
                   <p class="font-semibold hover-underline-animation after:bg-base-slate-800 after:h-0.5"
-                     :class="{ 'text-primary after:bg-primary': $route.path == menu.link, 'after:bg-black dark:after:bg-white': $route.path != menu.link }">
+                     :class="{ 'text-primary after:bg-primary': menu.activeLink.includes($route.path), 'after:bg-black dark:after:bg-white': $route.path != menu.link }">
                      {{ menu.name }}</p>
                </NuxtLink>
             </li>
