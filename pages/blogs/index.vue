@@ -1,4 +1,7 @@
 <script setup>
+useHead({
+    title: 'Phanthakarn | Blogs',
+})
 const blogs = [
     {
         title: "How to build Nuxt 3 project",

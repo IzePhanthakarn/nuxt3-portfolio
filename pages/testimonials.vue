@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useHead({
+  title: 'Phanthakarn | Testimonials',
+})
+
 const testimonials = [
     {
         name: "Sompong Khumphai",

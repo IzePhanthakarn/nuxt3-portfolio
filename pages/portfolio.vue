@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { portfolioCard } from '~~/assets/interface'
+useHead({
+  title: 'Phanthakarn | Portfolio',
+})
 const softskillTags: portfolioCard[] = [
     {
         img: "/img/projects/nuxt3-portfolio.png", projectTag: "UI Website", name: "My Portfolio Website", icon: "ph:globe", lastUpdate: "Mar 23, 2023", link: "https://github.com/IzePhanthakarn/nuxt3-portfolio", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project. I am committed to consistently updating the content, whether it be new projects or newly acquired skills that I have learned.", tags: [
