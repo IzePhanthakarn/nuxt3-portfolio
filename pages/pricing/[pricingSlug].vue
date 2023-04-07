@@ -9,7 +9,9 @@ const plan = computed(() => {
     );
 });
 const checkLists = plan.value?.checkLists;
-
+useHead({
+    title: `Phanthakarn | ${plan.value?.title}`,
+})
 function addCommas(num: any) {
     num = num.toString();
     var len = num.length;

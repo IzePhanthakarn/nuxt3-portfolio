@@ -1,3 +1,8 @@
+<script setup>
+useHead({
+    title: 'Phanthakarn | Pricing',
+})
+</script>
 <template>
     <div class="w-full min-height text-white pt-24">
 
@@ -14,15 +19,14 @@
             <PricingFaq />
         </div>
     </div>
-</template>
+</template >
 
 <style scoped>
 .head::before {
-   bottom: 11.5px;
+    bottom: 11.5px;
 }
 
 .head::after {
-   bottom: 0;
+    bottom: 0;
 }
-
 </style>

@@ -16,6 +16,13 @@ const blog = {
     slug: "how-to-build-nuxt3-project"
 }
 
+useHead({
+  title: `Blog | ${ blog.title}`,
+  meta: [
+    { name: 'description', content: blog.description}
+  ]
+})
+
 function copyText(text: string) {
     navigator.clipboard.writeText(text);
 }

@@ -62,6 +62,10 @@
                     <Icon name="fa6-brands:square-github" class="hover:text-primary hover:-translate-y-2 duration-300"
                         size="45"></Icon>
                 </Nuxt-Link>
+                <Nuxt-Link to="https://discord.gg/uBvnbbjS55" target="_blank">
+                    <Icon name="mdi:discord" class="hover:text-primary translate-y-0.5 hover:-translate-y-2 duration-300"
+                        size="47"></Icon>
+                </Nuxt-Link>
             </div>
 
             <div class="hidden sm:flex justify-center items-center space-x-3">

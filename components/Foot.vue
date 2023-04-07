@@ -21,6 +21,9 @@
             <Nuxt-Link to="https://github.com/IzePhanthakarn" target="_blank">
                <Icon name="fa6-brands:square-github" class="hover:text-primary duration-300" size="40"></Icon>
             </Nuxt-Link>
+            <Nuxt-Link to="https://discord.gg/uBvnbbjS55" target="_blank">
+               <Icon name="mdi:discord" class="hover:text-primary duration-300 translate-y-0.5" size="42"></Icon>
+            </Nuxt-Link>
          </div>
          <div
             class="w-full lg:w-auto text-center text-sm lg:text-lg my-3 pt-3 lg:pt-0 lg:my-0 border-t-[1px] lg:border-none border-primary">
