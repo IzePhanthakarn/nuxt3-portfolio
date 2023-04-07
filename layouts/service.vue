@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const secretCode = ['/', 'l', 'o', 'g', 'i', 'n', 'Enter'];
 let index = 0;
-const is_open = ref(true)
+const is_open = ref(false)
 
 function toggleMenu() {
     is_open.value = !is_open.value;
