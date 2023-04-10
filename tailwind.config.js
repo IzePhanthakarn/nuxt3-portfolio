@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary' : "#f13637",
+        'primary' : "#F13637",
         'color-base' : "#171820",
         'color-base2' : "#222434"
       },
@@ -33,5 +33,27 @@ export default {
         'login-page' : "url('/bg/relax-cafe.jpg')"
        }
     }
-  }
+  },
+  daisyui: {
+    themes: [
+       {
+          light: {
+            "primary": "#F13637",
+            "secondary": "#F000B8",
+               "accent": "#37CDBE",
+               "neutral": "#2F2F2F",
+               "neutral-focus": "#0F0F0F",
+               "neutral-content": "#D1D1D6",
+               "neutral2": "#0F0F0F",
+               "background": "#E5E5E5",
+               "base-100": "#FFFFFF",
+               "info": "#3ABFF8",
+               "success": "#36D399",
+               "warning": "#FBBD23",
+               "error": "#F87272",
+          },
+       }
+    ]
+ },
+  plugins: [require('daisyui')],
 }

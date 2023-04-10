@@ -21,7 +21,6 @@
 }
 .layout-enter-from,
 .layout-leave-to {
-  scale: .99;
   filter: blur(.15rem);
 
 }

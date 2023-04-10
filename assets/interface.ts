@@ -61,3 +61,16 @@ export interface faqAccording {
    isShow: boolean
    description: string
 }
+
+export interface Gatget {
+   title: string
+   icon: string
+   value: string
+   link: string
+   role?: string
+}
+
+export interface TodoItem {
+   text: string
+   done: boolean
+}
