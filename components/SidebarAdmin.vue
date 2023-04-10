@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Menu } from '~/assets/interface'
 const menus = [
-   { name: 'Dashboard', link: '/', icon: 'ic:outline-space-dashboard', route: 'dashboard' },
+   { name: 'Dashboard', link: '/dashboard', icon: 'ic:outline-space-dashboard', route: 'dashboard' },
    { name: 'Employment', link: '/employment', icon: 'uil:pricetag-alt', route: 'employment' },
    { name: 'Testimonial', link: '/testimonial', icon: 'lucide:quote', route: 'testimonial' },
    { name: 'Plan', link: '/plan', icon: 'uil:clipboard-blank', route: 'plan' },
