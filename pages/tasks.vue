@@ -51,7 +51,7 @@ function deleteList(index: number) {
                                 <div class="flex items-center space-x-2">
 
                                     <label for="my-modal-1"
-                                    class="bg-primary text-base-100 font-semibold py-1 px-2 rounded-md hover:bg-primary-focus cursor-pointer">Add
+                                    class="bg-primary text-base-100 font-semibold py-1 px-2 rounded-md hover:bg-primary-focus cursor-pointer active:scale-95">Add
                                     list</label>
                                     
                                     <button class="w-8">

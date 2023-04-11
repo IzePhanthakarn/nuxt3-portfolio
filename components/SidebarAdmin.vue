@@ -5,8 +5,9 @@ const menus = [
    { name: 'Employment', link: '/employment', icon: 'uil:pricetag-alt', route: 'employment' },
    { name: 'Testimonial', link: '/admin-testimonial', icon: 'lucide:quote', route: 'admin-testimonial' },
    { name: 'Tasks', link: '/tasks', icon: 'uil:clipboard-blank', route: 'tasks' },
-   { name: 'Wallet', link: '/wallet', icon: 'uil:wallet', route: 'wallet' },
    { name: 'Health', link: '/health', icon: 'icon-park-outline:muscle', route: 'health' },
+   { name: 'Finance', link: '/finance', icon: 'uil:wallet', route: 'finance' },
+   { name: 'Investment', link: '/investment', icon: 'uil:chart', route: 'investment' },
 ]
 
 const props = defineProps<{
