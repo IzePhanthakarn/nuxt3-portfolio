@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { WidgetInstance } from "friendly-challenge";
+
 const route = useRoute();
 const pricing = usePricing();
 const darkmode = ref(false)
@@ -53,6 +55,41 @@ const totalTH: any = computed(() => {
     return total
 })
 
+const isValid = ref(false)
+function myCallback(solution:any) {
+    console.log("Captcha finished with solution " + solution);
+    isValid.value = true
+}
+
+
+const container = ref();
+const widget = ref();
+
+const doneCallback = (solution:any) => {
+  console.log('Captcha was solved. The form can be submitted.');
+  console.log(solution);
+}
+
+const errorCallback = (err:any) => {
+  console.log('There was an error when trying to solve the Captcha.');
+  console.log(err);
+}
+
+watch(container, () => {
+  // reset the widget instance when the container changes
+  if (widget.value) {
+    widget.value.destroy();
+  }
+
+  if (container.value) {
+    widget.value = new WidgetInstance(container.value, {
+      sitekey: 'FCMLH6SG8H3PT7BE',
+      startMode: "auto",
+      doneCallback: doneCallback,
+      errorCallback: errorCallback ,
+    });
+  }
+});
 </script>
 
 <template>
@@ -173,15 +210,19 @@ const totalTH: any = computed(() => {
                     <p class="text-3xl font-medium">{{ total }} $ <span class="text-gray-500 text-2xl">( {{ totalTH }} ฿
                             )</span></p>
                 </div>
-                <div class="w-full mb-4 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end">
-                    <button type="submit" class="px-2.5 py-1.5 border-2 rounded-xl text-lg flex items-center overflow-hidden duration-300 hover:border-primary">
-                        <div class="svg-wrapper-1">
-                            <div class="svg-wrapper">
-                                <Icon name="lucide:send" />
+                <div class="flex-items-center">
+                    <!-- <vue-friendly-captcha sitekey="FCMLH6SG8H3PT7BE" :data-callback=myCallback /> -->
+                    <div ref="container"></div>
+                    <div class="w-full mb-4 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end">
+                        <button type="submit" class="px-2.5 py-1.5 border-2 rounded-xl text-lg flex items-center overflow-hidden duration-300 hover:border-primary">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <Icon name="lucide:send" />
+                                </div>
                             </div>
-                        </div>
-                        <span class="font-medium">Submit</span>
-                    </button>
+                            <span class="font-medium">Submit</span>
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
