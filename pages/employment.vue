@@ -10,6 +10,52 @@ const typeSelected = ref('All')
 const typeList = ['All', 'Landing Page Website', 'Multi-Page Website', 'Web Application']
 const statusSelected = ref('All')
 const statusList = ['All', 'Request', 'Accepted', 'Finished']
+const emplotmentList = [
+    {
+        id: 1,
+        plan: "Web Application",
+        darkmode: true,
+        multi_lang: true,
+        name: "Phanthakarn Khumphai",
+        email: "izephanthakarn@hotmail.com",
+        phone: "0983405579",
+        price: 199.99,
+        status: 0
+    },
+    {
+        id: 2,
+        plan: "Web Application",
+        darkmode: true,
+        multi_lang: false,
+        name: "Phanthakarn Khumphai",
+        email: "izephanthakarn@hotmail.com",
+        phone: "0983405579",
+        price: 199.99,
+        status: 1
+    },
+    {
+        id: 3,
+        plan: "Web Application",
+        darkmode: false,
+        multi_lang: true,
+        name: "Phanthakarn Khumphai",
+        email: "izephanthakarn@hotmail.com",
+        phone: "0983405579",
+        price: 199.99,
+        status: 2
+    },
+    {
+        id: 4,
+        plan: "Web Application",
+        darkmode: false,
+        multi_lang: false,
+        name: "Phanthakarn Khumphai",
+        email: "izephanthakarn@hotmail.com",
+        phone: "0983405579",
+        price: 199.99,
+        status: 3
+    },
+]
 </script>
 
 <template>
@@ -28,7 +74,7 @@ const statusList = ['All', 'Request', 'Accepted', 'Finished']
                         class="login__box w-full mt-7 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                         <Icon name="uil:user" class="login__icon" size="36" />
                         <div class="relative">
-                            <input type="email" v-model="name"
+                            <input type="text" v-model="name"
                                 class="login__input w-full py-3 pb-2 outline-none bg-transparent relative z-[1]"
                                 placeholder=" " spellcheck="false">
                             <label class="login__label absolute left-0 top-2 duration-300 font-medium text-lg">Name</label>
@@ -76,36 +122,48 @@ const statusList = ['All', 'Request', 'Accepted', 'Finished']
                 <div class="w-full height-content mt-6 p-3 bg-neutral-content rounded-xl overflow-hidden">
                     <div class="w-full height-table overflow-y-scroll space-y-4 rounded-xl column-1">
                         <div
-                            class="w-full h-40 table-content bg-white border-[3px] border-primary text-black grid grid-cols-3 rounded-xl">
+                        v-for="(employment,index) in emplotmentList" :key="index"
+                            class="w-full h-40 bg-white border-[3px] border-primary text-black grid grid-cols-3 rounded-xl">
                             <div class="w-full h-full border-r-2 p-4">
                                 <div class="h-full flex flex-col">
-                                    <h1 class="text-3xl font-semibold mb-2 border-b-2">Plan: Web Application</h1>
+                                    <h1 class="text-3xl font-semibold mb-2 border-b-2">Plan: {{ employment.plan }}</h1>
                                     <div class="w-full flex items-center space-x-3">
-                                        <input type="radio" class="radio radio-primary h-5 w-5" checked />
+                                        <input v-if="employment.darkmode" type="radio" class="radio radio-primary h-5 w-5 cursor-default" checked />
+                                        <div v-else class="radio radio-primary h-5 w-5 cursor-default" ></div>
                                         <p class="text-xl font-semibold mt-0.5">Darkmode</p>
                                     </div>
                                     <div class="w-full flex items-center space-x-3">
-                                        <input type="radio" class="radio radio-primary h-5 w-5" checked />
+                                        <input v-if="employment.multi_lang" type="radio" class="radio radio-primary h-5 w-5 cursor-default" checked />
+                                        <div v-else class="radio radio-primary h-5 w-5 cursor-default" ></div>
                                         <p class="text-xl font-semibold mt-0.5">Multi-lang</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="w-full h-full border-r-2 px-4 flex flex-col justify-around divide-y-2">
-                                <p class="h-full flex items-center text-xl font-semibold">name: Phanthakarn Khumphai</p>
-                                <p class="h-full flex items-center text-xl font-semibold">email: izephanthakarn@hotmail.com
+                                <p class="h-full flex items-center text-xl font-semibold">Name: {{ employment.name }}</p>
+                                <p class="h-full flex items-center text-xl font-semibold">Email: {{ employment.email }}
                                 </p>
-                                <p class="h-full flex items-center text-xl font-semibold">Phone: 0983405579</p>
+                                <p class="h-full flex items-center text-xl font-semibold">Phone: {{ employment.phone }}</p>
                             </div>
 
                             <div class="w-full h-full px-4 flex flex-col justify-around divide-y-2 ">
                                 <div class="h-full flex items-center justify-between text-xl font-semibold">
                                     <p>Total price:</p>
-                                    <p>199.99 $</p>
+                                    <p>{{ employment.price }} $</p>
                                 </div>
                                 <div class="h-full flex items-center justify-between text-xl font-semibold">
-                                    <p>Status</p>
-                                    <div class="badge badge-success px-2.5 py-3 text-lg font-medium text-green-900">
+                                    <p>Status:</p>
+                                    <div v-if="employment.status === 0" class="badge badge-warning px-2.5 py-3 text-lg font-medium">
+                                        request
+                                    </div>
+                                    <div v-if="employment.status === 1" class="badge badge-info px-2.5 py-3 text-lg font-medium">
+                                        accepted
+                                    </div>
+                                    <div v-if="employment.status === 2" class="badge badge-error px-2.5 py-3 text-lg font-medium">
+                                        reject
+                                    </div>
+                                    <div v-if="employment.status === 3" class="badge badge-success px-2.5 py-3 text-lg font-medium">
                                         success
                                     </div>
                                 </div>
@@ -150,4 +208,5 @@ input::-ms-reveal {
 .login__input:not(:placeholder-shown).login__input:not(:focus)+.login__label {
     top: -20px;
     font-size: 16px;
-}</style>
+}
+</style>
