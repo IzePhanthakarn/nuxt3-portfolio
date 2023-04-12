@@ -4,6 +4,8 @@ const route = useRoute();
 const pricing = usePricing();
 const darkmode = ref(false)
 const multiLang = ref(false)
+const formDarkmode = ref(0)
+const formMultiLang = ref(0)
 const plan = computed(() => {
    return pricing.plans.find(
       (plan) => plan.slug === route.params.pricingSlug
@@ -29,15 +31,27 @@ const priceTH = addCommas(plan.value?.thPrice);
 
 const additions: object = computed(() => {
    let addition: string[] = []
-   darkmode.value ? addition.push("Darkmode") : addition = addition.filter(num => num != "Darkmode")
-   multiLang.value ? addition.push("Multi Language") : addition = addition.filter(num => num != "Multi Language")
+   if (darkmode.value) {
+      addition.push("Darkmode")
+      formDarkmode.value = 1
+   } else {
+      addition = addition.filter(num => num != "Darkmode")
+      formDarkmode.value = 0
+   }
+   if (multiLang.value) {
+      addition.push("Multi Language")
+      formMultiLang.value = 1
+   } else {
+      addition = addition.filter(num => num != "Multi Language")
+      formMultiLang.value = 0
+   }
    return addition
 });
 
-const name = ref('');
-const email = ref('');
-const phone = ref('');
-const description = ref('')
+let name:string;
+let email:string
+let phone:string
+let description:string
 
 const total: any = computed(() => {
    let total: any = plan.value?.price;
@@ -59,6 +73,31 @@ function checkHuman() {
    isBot.value = false
 }
 
+function formSubmit() {
+   let form = {
+      planName: plan.value?.title,
+      darkmode: formDarkmode.value,
+      multiLang: formMultiLang.value,
+      name: name,
+      email: email,
+      phone: phone,
+      price: plan.value?.price,
+      priceTh: plan.value?.thPrice,
+      description,
+   };
+   formRequest(form).then((result) => {
+      console.log(result)
+   }).catch((error) => {
+      console.error('Contact form could not be send', error)
+   });
+}
+
+async function formRequest(form:any) {
+   return await $fetch('http://localhost:8080/employments', {
+      method: 'POST',
+      body: form,
+   });
+}
 </script>
 
 <template>
@@ -142,7 +181,7 @@ function checkHuman() {
                class="login__box mt-2 col-span-3 sm:col-span-2 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                <Icon name="uil:user" class="login__icon" size="32" />
                <div class="relative">
-                  <input type="text" v-model="name"
+                  <input type="text" v-model.trim="name"
                      class="login__input w-full py-3 pb-2 outline-none bg-transparent relative z-[1]" placeholder=" "
                      spellcheck="false">
                   <label class="login__label absolute left-0 top-2 duration-300 font-medium text-lg">Name</label>
@@ -153,7 +192,7 @@ function checkHuman() {
                class="login__box mt-7 col-span-3 sm:col-span-2 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                <Icon name="line-md:email" class="login__icon" size="36" />
                <div class="relative">
-                  <input type="email" v-model="email"
+                  <input type="email" v-model.trim="email"
                      class="login__input w-full py-3 pb-2 outline-none bg-transparent relative z-[1]" placeholder=" "
                      spellcheck="false">
                   <label class="login__label absolute left-0 top-2 duration-300 font-medium text-lg">Email</label>
@@ -164,7 +203,7 @@ function checkHuman() {
                class="login__box mt-7 col-span-3 sm:col-span-2 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                <Icon name="uil:phone" class="login__icon" size="32" />
                <div class="relative">
-                  <input type="tell" v-model="phone"
+                  <input type="tell" v-model.trim="phone"
                      class="login__input w-full py-3 pb-2 outline-none bg-transparent relative z-[1]" placeholder=" "
                      spellcheck="false">
                   <label class="login__label absolute left-0 top-2 duration-300 font-medium text-lg">Phone</label>
@@ -173,7 +212,7 @@ function checkHuman() {
 
             <div class="col-span-3 flex flex-col mt-8 pb-0.5">
                <label for="description" class="mb-1 text-xl font-medium">Description:</label>
-               <textarea name="description" v-model="description" rows="5" class="rounded-xl bg-gray-700 p-2"
+               <textarea name="description" v-model.trim="description" rows="5" class="rounded-xl bg-gray-700 p-2"
                   spellcheck=false></textarea>
             </div>
 
@@ -185,11 +224,11 @@ function checkHuman() {
             </div>
             <div class="flex flex-col sm:flex-row col-span-3 sm:col-span-1 items-center space-x-4">
                <vue-friendly-captcha sitekey="FCMLH6SG8H3PT7BE" :dark=true startMode="none" :onDone="checkHuman" />
-               <div class="w-full sm:w-fit pr-2 mr-0 sm:mr-auto ml-auto mt-4 sm:mt-0 mb-2 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end">
-                  <button type="submit"
-                     class="px-2.5 py-1.5 border-2 rounded-xl text-lg flex items-center overflow-hidden duration-300 hover:border-primary"
-                     :class="{'pointer-events-none border-gray-500 text-gray-500': isBot}"
-                     >
+               <div
+                  class="w-full sm:w-fit pr-2 mr-0 sm:mr-auto ml-auto mt-4 sm:mt-0 mb-2 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end">
+                  <!-- :class="{ 'pointer-events-none border-gray-500 text-gray-500': isBot }" -->
+                  <button type="submit" @click="formSubmit"
+                     class="px-2.5 py-1.5 border-2 rounded-xl text-lg flex items-center overflow-hidden duration-300 hover:border-primary">
                      <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
                            <Icon name="lucide:send" />
@@ -205,11 +244,12 @@ function checkHuman() {
 </template>
 
 <style scoped>
-.frc-captcha{
+.frc-captcha {
    background: transparent !important;
    border: none;
    margin-bottom: 5px;
 }
+
 .height-screen {
    height: calc(100vh - 64px);
 }
