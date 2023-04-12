@@ -28,6 +28,7 @@ function addCommas(num: any) {
    return result;
 }
 const priceTH = addCommas(plan.value?.thPrice);
+const totalTHForm = ref(0)
 
 const additions: object = computed(() => {
    let addition: string[] = []
@@ -48,10 +49,10 @@ const additions: object = computed(() => {
    return addition
 });
 
-let name:string;
-let email:string
-let phone:string
-let description:string
+let name: string = ""
+let email: string = ""
+let phone: string = ""
+let description: string
 
 const total: any = computed(() => {
    let total: any = plan.value?.price;
@@ -64,6 +65,7 @@ const totalTH: any = computed(() => {
    let total: any = plan.value?.thPrice;
    darkmode.value ? total += 350 : total += 0
    multiLang.value ? total += 350 : total += 0
+   totalTHForm.value = total
    total = addCommas(total)
    return total
 })
@@ -73,30 +75,75 @@ function checkHuman() {
    isBot.value = false
 }
 
+async function formRequest(form: any) {
+   return await $fetch('http://localhost:8080/employments', {
+      method: 'POST',
+      body: form,
+   });
+}
+
+function validateForm(form: any) {
+   let error = ""
+   const regex = /^[0-9]+$/;
+   if (form.name === "") error = "Please enter your name"
+   else if (form.email === "") error = "Please enter your email"
+   else if (form.email.search(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g) < 0) error = "Please enter a valid email address"
+   else if (form.phone === "") error = "Please enter your phone number"
+   else if (form.phone.search(/^[0-9]+$/)) error = "Please enter a valid phone number"
+   else if (form.phone.length != 10) error = "Please enter a full 10 digit phone number"
+   else if (!form.phone.startsWith('0')) error = "Please enter phone number start with 0"
+   else error = ""
+   return error
+}
+
 function formSubmit() {
    let form = {
       planName: plan.value?.title,
       darkmode: formDarkmode.value,
       multiLang: formMultiLang.value,
-      name: name,
-      email: email,
-      phone: phone,
-      price: plan.value?.price,
-      priceTh: plan.value?.thPrice,
+      name,
+      email,
+      phone,
+      price: total.value,
+      priceTh: totalTHForm.value,
       description,
    };
+
+   let error = validateForm(form);
+   if (error != "") {
+      $toast.open({
+         message: error,
+         type: "error",
+         position: "top-right"
+      });
+      return;
+   }
+
    formRequest(form).then((result) => {
-      console.log(result)
+      // console.log(result)
+      // location.reload()
+      // show()
+      isOpen.value = true
+      // notification("Your offer has been submitted successfully", 'success', 6000);
    }).catch((error) => {
-      console.error('Contact form could not be send', error)
+      notification(error, 'error', 3000)
    });
 }
 
-async function formRequest(form:any) {
-   return await $fetch('http://localhost:8080/employments', {
-      method: 'POST',
-      body: form,
+const { $toast } = useNuxtApp();
+
+function notification(message: string, type: string, duration: number) {
+   $toast.open({
+      message: message,
+      type: type,
+      position: 'top-right',
+      duration
    });
+}
+const isOpen = ref(false);
+
+function toPricing() {
+   navigateTo('/pricing');
 }
 </script>
 
@@ -192,7 +239,7 @@ async function formRequest(form:any) {
                class="login__box mt-7 col-span-3 sm:col-span-2 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                <Icon name="line-md:email" class="login__icon" size="36" />
                <div class="relative">
-                  <input type="email" v-model.trim="email"
+                  <input type="text" v-model.trim="email"
                      class="login__input w-full py-3 pb-2 outline-none bg-transparent relative z-[1]" placeholder=" "
                      spellcheck="false">
                   <label class="login__label absolute left-0 top-2 duration-300 font-medium text-lg">Email</label>
@@ -203,7 +250,7 @@ async function formRequest(form:any) {
                class="login__box mt-7 col-span-3 sm:col-span-2 lg:col-span-1 grid pb-[2px] items-center gap-x-2 border-b-2 border-white">
                <Icon name="uil:phone" class="login__icon" size="32" />
                <div class="relative">
-                  <input type="tell" v-model.trim="phone"
+                  <input type="tel" v-model.trim="phone" maxlength="10" minlength="10"
                      class="login__input w-full py-3 pb-2 outline-none bg-transparent relative z-[1]" placeholder=" "
                      spellcheck="false">
                   <label class="login__label absolute left-0 top-2 duration-300 font-medium text-lg">Phone</label>
@@ -240,10 +287,57 @@ async function formRequest(form:any) {
             </div>
          </form>
       </div>
+      <div
+         class="prevent-box bg-color-base2 border-2 border-color-base w-11/12 sm:w-2/3 lg:w-auto flex flex-col items-center justify-center text-default font-medium"
+         :class="{ 'active': isOpen }">
+         <h1 class="py-4 px-8 text-2xl">Your offer has been submitted successfully</h1>
+         <hr class="border-t w-full">
+         <Icon class="p-5" name="line-md:confirm-circle" size="200" />
+         <p class="px-8 text-center">Thank you for your interest and contacting me to hire me. <br> I will read and reply to you as soon as possible.</p>
+         <BaseButton class="mb-6 mt-8 mr-6 ml-auto" @click="toPricing">Thanks !</BaseButton>
+      </div>
+      <div class="overlay" :class="{ 'active': isOpen }"></div>
    </div>
 </template>
 
 <style scoped>
+
+.prevent-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    z-index: 60;
+}
+
+.prevent-box.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.prevent-box img {
+    max-height: 80vh;
+}
+
+.overlay {
+    position: fixed;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    z-index: 59;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .frc-captcha {
    background: transparent !important;
    border: none;

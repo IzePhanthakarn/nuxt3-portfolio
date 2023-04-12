@@ -16,6 +16,7 @@
     "friendly-challenge": "^0.9.11",
     "nuxt": "^3.3.1",
     "nuxt-icon": "^0.3.3",
+    "vue-toast-notification": "^3.1.1",
     "vue3-carousel": "^0.2.13"
   }
 }
