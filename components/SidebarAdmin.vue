@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { Menu } from '~/assets/interface'
 const menus = [
-   { name: 'Dashboard', link: '/', icon: 'ic:outline-space-dashboard', route: 'dashboard' },
+   { name: 'Dashboard', link: '/dashboard', icon: 'ic:outline-space-dashboard', route: 'dashboard' },
    { name: 'Employment', link: '/employment', icon: 'uil:pricetag-alt', route: 'employment' },
-   { name: 'Testimonial', link: '/testimonial', icon: 'lucide:quote', route: 'testimonial' },
-   { name: 'Plan', link: '/plan', icon: 'uil:clipboard-blank', route: 'plan' },
-   { name: 'Wallet', link: '/wallet', icon: 'uil:wallet', route: 'wallet' },
+   { name: 'Testimonial', link: '/admin-testimonial', icon: 'lucide:quote', route: 'admin-testimonial' },
+   { name: 'Tasks', link: '/tasks', icon: 'uil:clipboard-blank', route: 'tasks' },
    { name: 'Health', link: '/health', icon: 'icon-park-outline:muscle', route: 'health' },
+   { name: 'Finance', link: '/finance', icon: 'uil:wallet', route: 'finance' },
+   { name: 'Investment', link: '/investment', icon: 'uil:chart', route: 'investment' },
 ]
 
 const props = defineProps<{

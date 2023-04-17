@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       port:3000,
    },
    modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
-   css: ['@/assets/css/main.css'],
+   css: ['@/assets/css/main.css','vue-toast-notification/dist/theme-default.css'],
    runtimeConfig: {
       public: {
          username: process.env.USERNAMEDEV,

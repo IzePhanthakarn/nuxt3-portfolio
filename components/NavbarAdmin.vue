@@ -3,9 +3,10 @@ import provinces from '~~/assets/dictionary/provinces'
 const menus = [
    { name: 'Dashboard', link: '/', icon: 'ic:outline-space-dashboard', route: '/dashboard' },
    { name: 'Employment', link: '/employment', icon: 'uil:pricetag-alt', route: '/employment' },
-   { name: 'Your plan', link: '/plan', icon: 'uil:clipboard-blank', route: '/plan' },
-   { name: 'Your wallet', link: '/wallet', icon: 'uil:wallet', route: '/wallet' },
-   { name: 'Your health', link: '/health', icon: 'icon-park-outline:muscle', route: '/health' },
+   { name: 'Your tasks', link: '/tasks', icon: 'uil:clipboard-blank', route: '/tasks' },
+   { name: 'Health', link: '/health', icon: 'icon-park-outline:muscle', route: 'health' },
+   { name: 'Finance', link: '/finance', icon: 'uil:wallet', route: 'finance' },
+   { name: 'Investment', link: '/investment', icon: 'uil:chart', route: 'investment' },
    { name: 'Setting', link: '/setting', icon: 'uil:setting', route: '/setting' }
 ]
 const is_open = ref(false);
