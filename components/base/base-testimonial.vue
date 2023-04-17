@@ -17,7 +17,7 @@ const props = defineProps({
       default: ''
    },
    lastUpdate: {
-      type: String,
+      type: Date,
       default: ''
    },
    score: {
@@ -25,6 +25,21 @@ const props = defineProps({
       default: 0
    }
 });
+const img = props.img.substring(1)
+let image = `https://go-portfolio.onrender.com${img}` 
+// @ts-expect-error
+const millisec = Date.parse(props.lastUpdate);
+
+const date = new Date(millisec)
+
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+const year = date.getFullYear()
+const month = monthNames[date.getMonth()]
+const day = date.getDate()
+const formatDate = `${month}, ${day} ${year}`
+
 </script>
 
 <template>
@@ -32,8 +47,8 @@ const props = defineProps({
       class="bg-[#222434] h-full flex flex-col justify-between p-2.5 pb-1 rounded-xl ring-2 ring-[#222434] hover:ring-2 hover:ring-white">
       <div class="w-full">
          <div class="w-full flex space-x-4">
-            <img :src=img class="w-14 h-14 rounded-full border-2" alt="testimonail">
-            <div class="w-full flex flex-col items-start">
+            <img :src=image class="w-14 h-14 object-cover rounded-full border-2" alt="testimonail">
+            <div class="w-2/3 flex flex-col items-start">
                <h1 class="text-2xl font-semibold line-1clamp">{{ name }}</h1>
                <h2 class="text-lg">{{ relation }}</h2>
             </div>
@@ -48,7 +63,7 @@ const props = defineProps({
       <div>
          <hr class="my-3">
          <div class="w-full mb-1 flex items-center justify-between">
-            <p>{{ lastUpdate }}</p>
+            <p>{{ formatDate }}</p>
             <BaseScore :score="score"/>
          </div>
       </div>

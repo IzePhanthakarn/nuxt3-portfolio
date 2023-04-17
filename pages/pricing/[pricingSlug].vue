@@ -76,7 +76,7 @@ function checkHuman() {
 }
 
 async function formRequest(form: any) {
-   return await $fetch('http://localhost:8080/employments', {
+   return await $fetch('https://go-portfolio.onrender.com/employments', {
       method: 'POST',
       body: form,
    });
@@ -120,11 +120,7 @@ function formSubmit() {
    }
 
    formRequest(form).then((result) => {
-      // console.log(result)
-      // location.reload()
-      // show()
       isOpen.value = true
-      // notification("Your offer has been submitted successfully", 'success', 6000);
    }).catch((error) => {
       notification(error, 'error', 3000)
    });
@@ -272,8 +268,8 @@ function toPricing() {
             <div class="flex flex-col sm:flex-row col-span-3 sm:col-span-1 items-center space-x-4">
                <vue-friendly-captcha sitekey="FCMLH6SG8H3PT7BE" :dark=true startMode="none" :onDone="checkHuman" />
                <div
-                  class="w-full sm:w-fit pr-2 mr-0 sm:mr-auto ml-auto mt-4 sm:mt-0 mb-2 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end">
-                  <!-- :class="{ 'pointer-events-none border-gray-500 text-gray-500': isBot }" -->
+                  class="w-full sm:w-fit pr-2 mr-0 sm:mr-auto ml-auto mt-4 sm:mt-0 mb-2 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end"
+                  :class="{ 'pointer-events-none border-gray-500 text-gray-500': isBot }">
                   <button type="submit" @click="formSubmit"
                      class="px-2.5 py-1.5 border-2 rounded-xl text-lg flex items-center overflow-hidden duration-300 hover:border-primary">
                      <div class="svg-wrapper-1">
@@ -301,42 +297,6 @@ function toPricing() {
 </template>
 
 <style scoped>
-
-.prevent-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: .2s ease-in-out;
-    border-radius: 10px;
-    z-index: 60;
-}
-
-.prevent-box.active {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.prevent-box img {
-    max-height: 80vh;
-}
-
-.overlay {
-    position: fixed;
-    opacity: 0;
-    transition: .2s ease-in-out;
-    z-index: 59;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-}
-
-.overlay.active {
-    opacity: 1;
-    pointer-events: all;
-}
 
 .frc-captcha {
    background: transparent !important;
