@@ -13,7 +13,14 @@ const portfolios: portfolioCard[] = [
         ]
     },
     {
-        img: "/img/services/calculator.png", projectTag: "Web Service", name: "Online Calculator", icon: "uil:shutter-alt", lastUpdate: "May 1, 2022", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations.", tags: [
+        img: "/img/services/calculator.png", projectTag: "Web Service", name: "Online Calculator", icon: "uil:shutter-alt", button: "Demo", lastUpdate: "May 1, 2022", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations.", tags: [
+            { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
+            { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "20" },
+            { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+        ]
+    },
+    {
+        img: "/img/services/password-generator.png", projectTag: "Web Service", name: "Password Generator", icon: "uil:shutter-alt", button: "Demo", lastUpdate: "May 1, 2022", link: "/services/password-generator", description: "This web service is an online password generator that can be generate a strong password for you.", tags: [
             { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
             { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "20" },
             { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
@@ -107,7 +114,7 @@ function select(tag: string) {
                 <div v-for="(slide, index) in portfolios" :key="index" class="duration-300 scale-1 opacity-1"
                     :class="{ 'hidden opacity-0 scale-90': slide.projectTag != tagSelected && tagSelected != 'All', 'hidden': !slide.name.includes(searchName) }">
                     <BaseHomeProjectCard :name=slide.name :lastUpdate=slide.lastUpdate :description=slide.description
-                        :link=slide.link :img=slide.img :icon=slide.icon :tags="slide.tags" />
+                        :link=slide.link :img=slide.img :icon=slide.icon :tags="slide.tags" :button="slide.button"/>
                 </div>
             </div>
         </div>

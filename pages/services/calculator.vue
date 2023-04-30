@@ -92,6 +92,8 @@ const keyEmit = (e: Event) => {
           <CalculatorBody @display:model-value="keyEmit" />
         </div>
       </div>
+
+      <div class="ml-auto mr-4 mb-2 text-lg">Inspired by <NuxtLink class="text-primary font-medium hover:underline underline-offset-4" to="https://github.com/tenderking/calculator-nuxt-app" target="_blank">George Mushore</NuxtLink></div>
     </div>
   </div>
 </template>
