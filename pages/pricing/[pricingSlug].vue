@@ -265,7 +265,7 @@ function toPricing() {
                <p class="text-3xl font-medium">{{ total }} $ <span class="text-gray-500 text-2xl">( {{ totalTH }} ฿
                      )</span></p>
             </div>
-            <div class="flex flex-col sm:flex-row col-span-3 sm:col-span-1 items-center space-x-4">
+            <div class="flex flex-col sm:flex-row col-span-3 sm:col-span-1 items-center space-x-4 hidden">
                <vue-friendly-captcha sitekey="FCMLH6SG8H3PT7BE" :dark=true startMode="none" :onDone="checkHuman" />
                <div
                   class="w-full sm:w-fit pr-2 mr-0 sm:mr-auto ml-auto mt-4 sm:mt-0 mb-2 sm:mb-0 col-span-3 sm:col-span-1 flex items-center justify-end"
@@ -281,6 +281,7 @@ function toPricing() {
                   </button>
                </div>
             </div>
+            <div class="text-red-500 mt-4">Sorry, This feature is currently under maintenance.</div>
          </form>
       </div>
       <div

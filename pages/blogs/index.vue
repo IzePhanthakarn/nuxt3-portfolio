@@ -6,7 +6,7 @@ const blogs = [
     {
         title: "How to build Nuxt 3 project",
         author: "Phanthakarn Khumphai",
-        img: "https://firebasestorage.googleapis.com/v0/b/nuxt3-portfolio-a111c.appspot.com/o/Banner-blogs.png?alt=media&token=d5ba768c-72a3-4943-bcc2-3c92d56cd391",
+        img: "img/blogs/blog1/Banner-blogs.png",
         tags: [
             { icon: "logos:nuxt-icon", name: "Nuxt.js", link: "https://nuxtjs.org/" },
             { icon: "logos:tailwindcss-icon", name: "TailwindCSS", link: "https://tailwindcss.com/" },

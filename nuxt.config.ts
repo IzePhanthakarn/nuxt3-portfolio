@@ -20,12 +20,12 @@ export default defineNuxtConfig({
       layoutTransition: { name: 'layout', mode: 'out-in' }
    },
    ssr: false,
-   devServer:{
-      host:'0.0.0.0',
-      port:3000,
+   devServer: {
+      host: '0.0.0.0',
+      port: 3000,
    },
-   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
-   css: ['@/assets/css/main.css','vue-toast-notification/dist/theme-default.css'],
+   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/supabase'],
+   css: ['@/assets/css/main.css', 'vue-toast-notification/dist/theme-default.css'],
    runtimeConfig: {
       public: {
          username: process.env.USERNAMEDEV,

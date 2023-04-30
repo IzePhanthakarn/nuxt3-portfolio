@@ -63,6 +63,7 @@ function formSubmit() {
 
     let error = validateForm(form);
     if (error != "") {
+        // @ts-ignore
         $toast.open({
             message: error,
             type: "error",
@@ -86,8 +87,9 @@ function formSubmit() {
 }
 
 // Notification Toast
-const { $toast } = useNuxtApp();
+const { $toast  } = useNuxtApp();
 function notification(message: string, type: string, duration: number) {
+    // @ts-ignore
     $toast.open({
         message: message,
         type: type,
