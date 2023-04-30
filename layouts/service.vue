@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const secretCode = ['/', 'l', 'o', 'g', 'i', 'n', 'Enter'];
 let index = 0;
-const is_open = ref(false)
+const is_open = ref(true)
 
 function toggleMenu() {
     is_open.value = !is_open.value;
@@ -19,6 +19,10 @@ function onKeyDown(event: any) {
 }
 
 window.addEventListener('keydown', onKeyDown);
+const menus = [
+    { name: 'Calculator', link: '/calculator', activeLink: '/services' },
+];
+
 </script>
 <template>
     <div class="duration-300 min-h-screen flex flex-col justify-between bg-color-base overflow-hidden select-none">
@@ -34,7 +38,7 @@ window.addEventListener('keydown', onKeyDown);
                 :class="{ 'w-96 ': is_open }">
 
                 <div class="duration-300 w-full flex flex-col items-center justify-center"
-                    :class="{ '-translate-x-12': !is_open }">
+                    :class="{ '-translate-x-40': !is_open }">
 
                     <!-- Search box -->
                     <div class="w-full 2xl:w-11/12 mt-4 text-black font-semibold">
@@ -49,6 +53,15 @@ window.addEventListener('keydown', onKeyDown);
                                 <Icon name="uil:x" />
                             </button>
                         </form>
+                    </div>
+                    <hr class="my-3 w-11/12">
+                    <div class="w-full 2xl:w-11/12 text-white">
+                        <ul>
+                            <li v-for="menu in menus" :key="menu"
+                                class="p-2 text-xl font-medium line-1clamp cursor-pointer rounded-lg hover:bg-color-base duration-100"
+                                :class="{ 'bg-color-base': $route.path.includes(menu.link) }"
+                                @click="navigateTo(`/services${menu.link}`)">{{ menu.name }}</li>
+                        </ul>
                     </div>
                 </div>
             </div>

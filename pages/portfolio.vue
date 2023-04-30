@@ -3,9 +3,9 @@ import { portfolioCard } from '~~/assets/interface'
 useHead({
   title: 'Phanthakarn | Portfolio',
 })
-const softskillTags: portfolioCard[] = [
+const portfolios: portfolioCard[] = [
     {
-        img: "/img/projects/nuxt3-portfolio.png", projectTag: "UI Website", name: "My Portfolio Website", icon: "ph:globe", lastUpdate: "Mar 23, 2023", link: "https://github.com/IzePhanthakarn/nuxt3-portfolio", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project. I am committed to consistently updating the content, whether it be new projects or newly acquired skills that I have learned.", tags: [
+        img: "/img/projects/nuxt3-portfolio.png", projectTag: "UI Website", name: "My Portfolio Website", icon: "ph:globe", lastUpdate: "May 1, 2023", link: "https://github.com/IzePhanthakarn/nuxt3-portfolio", description: "This project is a portfolio website that showcases my skills and displays various projects that I have worked on, demonstrating my experience in project development. I utilized nuxt3 and JavaScript libraries to create this project. I am committed to consistently updating the content, whether it be new projects or newly acquired skills that I have learned.", tags: [
             { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
             { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "20" },
             { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
@@ -13,12 +13,19 @@ const softskillTags: portfolioCard[] = [
         ]
     },
     {
-        img: "/img/projects/CLI-generating-lorem.png", projectTag: "Programming", name: "CLI-generating-lorem", icon: "ph:terminal-window-bold", lastUpdate: "Mar 11, 2023", link: "https://github.com/IzePhanthakarn/CLI-generating-lorem", description: "This is a TypeScript-based CLI to generate Lorem Ipsum text, using a faker to generate the data and a commander to create a command-line interface.", tags: [
+        img: "/img/services/calculator.png", projectTag: "Web Service", name: "Online Calculator", icon: "uil:shutter-alt", lastUpdate: "May 1, 2022", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations.", tags: [
+            { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
+            { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "20" },
+            { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+        ]
+    },
+    {
+        img: "/img/projects/CLI-generating-lorem.png", projectTag: "Programming", name: "CLI-generating-lorem", icon: "ph:terminal-window-bold", lastUpdate: "Apr 11, 2023", link: "https://github.com/IzePhanthakarn/CLI-generating-lorem", description: "This is a TypeScript-based CLI to generate Lorem Ipsum text, using a faker to generate the data and a commander to create a command-line interface.", tags: [
             { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "22" }
         ]
     },
     {
-        img: "/img/projects/cash-book-sheet.png", projectTag: "Spreadsheet", name: "Cash Book Sheet", icon: "simple-icons:microsoftexcel", lastUpdate: "Mar 8, 2023", link: "https://docs.google.com/spreadsheets/d/1KDk4xL5cMBGHrkF4VPU6I6cUnBYcPP0n4qh3kf_XaQU/edit?usp=drivesdk", description: "The monthly income and expense report includes expenditure categories with basic summarized information such as total expenses, food expenses, shopping expenses, and many others. This sheet was created due to the issue of extravagant spending and the lack of knowledge regarding where the money is being spent. To gain insight into daily expenses, this sheet was developed to track where every penny is being spent.", tags: [
+        img: "/img/projects/cash-book-sheet.png", projectTag: "Spreadsheet", name: "Cash Book Sheet", icon: "simple-icons:microsoftexcel", lastUpdate: "Apr 8, 2023", link: "https://docs.google.com/spreadsheets/d/1KDk4xL5cMBGHrkF4VPU6I6cUnBYcPP0n4qh3kf_XaQU/edit?usp=drivesdk", description: "The monthly income and expense report includes expenditure categories with basic summarized information such as total expenses, food expenses, shopping expenses, and many others. This sheet was created due to the issue of extravagant spending and the lack of knowledge regarding where the money is being spent. To gain insight into daily expenses, this sheet was developed to track where every penny is being spent.", tags: [
             { icon: "simple-icons:googlesheets", name: "Google Sheet", link: "https://www.google.com/intl/th_th/sheets/about/" }
         ]
     },
@@ -97,7 +104,7 @@ function select(tag: string) {
 
             <div
                 class="w-full 2xl:w-11/12 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 border-t-2 py-4">
-                <div v-for="(slide, index) in softskillTags" :key="index" class="duration-300 scale-1 opacity-1"
+                <div v-for="(slide, index) in portfolios" :key="index" class="duration-300 scale-1 opacity-1"
                     :class="{ 'hidden opacity-0 scale-90': slide.projectTag != tagSelected && tagSelected != 'All', 'hidden': !slide.name.includes(searchName) }">
                     <BaseHomeProjectCard :name=slide.name :lastUpdate=slide.lastUpdate :description=slide.description
                         :link=slide.link :img=slide.img :icon=slide.icon :tags="slide.tags" />
