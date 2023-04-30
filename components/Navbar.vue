@@ -6,7 +6,7 @@ const menus: Menu[] = [
    { name: 'Portfolio', link: '/portfolio', activeLink: ['/portfolio'], icon: 'uil:image-v' },
    { name: 'Pricing', link: '/pricing', activeLink: ['/pricing', '/pricing/landing-page', '/pricing/multi-page', '/pricing/web-application'], icon: 'uil:pricetag-alt' },
    { name: 'Blogs', link: '/blogs', activeLink: ['/blogs'], icon: 'uil:blogger-alt' },
-   { name: 'Web Service', link: '/services', activeLink: ['/services'], icon: 'uil:shutter-alt' },
+   { name: 'Web Service', link: '/services', activeLink: ['/services','/services/calculator'], icon: 'uil:shutter-alt' },
 ]
 const is_open = ref(false);
 const is_scroll = ref(false);
