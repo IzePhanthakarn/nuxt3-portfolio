@@ -54,6 +54,7 @@ export interface portfolioCard {
    description: string
    projectTag: string
    tags: object
+   button?: string
 }
 
 export interface faqAccording {

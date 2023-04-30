@@ -1,21 +1,19 @@
 <script setup lang="ts">
-import { portfolioCard } from '~~/assets/interface'
 useHead({
     title: 'Phanthakarn | Portfolio',
-})
+});
 const services = [
-    {
-        img: "/img/services/calculator.png", projectTag: "Calculator", name: "Calculator", icon: "uil:calculator-alt", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations."
-    },
-]
-const tagList = ['All', 'Calculator', 'Converter', 'Generater', 'Game']
+    {img: "/img/services/calculator.png", projectTag: "Calculator", name: "Calculator", icon: "uil:calculator-alt", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations."},
+    {img: "/img/services/password-generator.png", projectTag: "Generator", name: "Password Generator", icon: "material-symbols:wifi-protected-setup-rounded", link: "/services/password-generator", description: "This web service is an online password generator that can be generate a strong password for you."},
+];
+const tagList = ['All', 'Calculator', 'Converter', 'Generator', 'Game','Image'];
 const tagSelected = ref('All');
-const searchName = ref('')
+const searchName = ref('');
 function resetsearchName() {
-    searchName.value = ''
+    searchName.value = '';
 }
 function select(tag: string) {
-    tagSelected.value = tag
+    tagSelected.value = tag;
 }
 </script>
 

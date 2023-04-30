@@ -20,7 +20,8 @@ function onKeyDown(event: any) {
 
 window.addEventListener('keydown', onKeyDown);
 const menus = [
-    { name: 'Calculator', link: '/calculator', activeLink: '/services' },
+    { name: 'Calculator', link: '/calculator'},
+    { name: 'Password Generator', link: '/password-generator'},
 ];
 
 </script>
