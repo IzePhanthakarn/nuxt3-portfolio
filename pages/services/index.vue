@@ -3,10 +3,11 @@ useHead({
     title: 'Phanthakarn | Portfolio',
 });
 const services = [
-    {img: "/img/services/calculator.png", projectTag: "Calculator", name: "Calculator", icon: "uil:calculator-alt", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations."},
-    {img: "/img/services/password-generator.png", projectTag: "Generator", name: "Password Generator", icon: "material-symbols:wifi-protected-setup-rounded", link: "/services/password-generator", description: "This web service is an online password generator that can be generate a strong password for you."},
+    { img: "/img/services/calculator.png", projectTag: ["Calculator"], name: "Calculator", icon: "uil:calculator-alt", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations." },
+    { img: "/img/services/password-generator.png", projectTag: ["Generator"], name: "Password Generator", icon: "material-symbols:wifi-protected-setup-rounded", link: "/services/password-generator", description: "This web service is an online password generator that can be generate a strong password for you." },
+    { img: "/img/services/qrcode-generator.png", projectTag: ["Generator", "Image"], name: "QR Code Generator", icon: "material-symbols:wifi-protected-setup-rounded", link: "/services/qrcode-generator", description: "This web service is an online QR Code generator that can be generate and customize you QR Code." },
 ];
-const tagList = ['All', 'Calculator', 'Converter', 'Generator', 'Game','Image'];
+const tagList = ['All', 'Calculator', 'Converter', 'Generator', 'Game', 'Image'];
 const tagSelected = ref('All');
 const searchName = ref('');
 function resetsearchName() {
@@ -60,7 +61,7 @@ function select(tag: string) {
             <div
                 class="w-full 2xl:w-11/12 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 border-t-2 py-4">
                 <div v-for="(slide, index) in services" :key="index" class="duration-300 scale-1 opacity-1"
-                    :class="{ 'hidden opacity-0 scale-90': slide.projectTag != tagSelected && tagSelected != 'All', 'hidden': !slide.name.includes(searchName) }">
+                    :class="{ 'hidden opacity-0 scale-90': !slide.projectTag.includes(tagSelected) && tagSelected != 'All', 'hidden': !slide.name.includes(searchName) }">
                     <BaseServiceCard :name=slide.name :description=slide.description :link=slide.link :img=slide.img
                         :icon=slide.icon />
                 </div>

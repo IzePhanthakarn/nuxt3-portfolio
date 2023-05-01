@@ -27,6 +27,13 @@ const portfolios: portfolioCard[] = [
         ]
     },
     {
+        img: "/img/services/qrcode-generator.png", projectTag: "Web Service", name: "QR Code Generator", icon: "uil:shutter-alt", button: "Demo", lastUpdate: "May 1, 2022", link: "/services/qrcode-generator", description: "This web service is an online QR Code generator that can be generate and customize you QR Code.", tags: [
+            { icon: "logos:nuxt-icon", name: "Nuxt3", link: "https://nuxtjs.org/" },
+            { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "20" },
+            { icon: "logos:tailwindcss-icon", name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+        ]
+    },
+    {
         img: "/img/projects/CLI-generating-lorem.png", projectTag: "Programming", name: "CLI-generating-lorem", icon: "ph:terminal-window-bold", lastUpdate: "Apr 11, 2023", link: "https://github.com/IzePhanthakarn/CLI-generating-lorem", description: "This is a TypeScript-based CLI to generate Lorem Ipsum text, using a faker to generate the data and a commander to create a command-line interface.", tags: [
             { icon: "skill-icons:typescript", name: "TypeScript", link: "https://www.typescriptlang.org/", iconSize: "22" }
         ]
