@@ -22,6 +22,7 @@ window.addEventListener('keydown', onKeyDown);
 const menus = [
     { name: 'Calculator', link: '/calculator'},
     { name: 'Password Generator', link: '/password-generator'},
+    { name: 'QR Code Generator', link: '/qrcode-generator'},
 ];
 
 </script>
