@@ -5,8 +5,6 @@
       <HomeExperiences />
       <HomeSkill />
       <HomePortfolio />
-      <HomeAdvertise />
-      <HomePricing />
       <HomeBlog />
       <HomeTestimonial />
       <HomeContacts />

@@ -10,7 +10,7 @@ const props = defineProps({
    },
    iconSize: {
       type: String,
-      default: '24'
+      default: '24',
    },
    softSkill: {
       type: Boolean,

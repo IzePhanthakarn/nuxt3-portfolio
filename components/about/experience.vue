@@ -8,8 +8,8 @@ const eduExps: homeExperience[] = [
         duration: "4 years",
         link: "https://www.su.ac.th/",
         img: "/img/experience/eesu.png",
-        detail: "After graduating from high school with an average GPA of only 3.13, I thought that it might disappoint my parents because I should have gone to a more prestigious university. However, I decided to study in the Faculty of Electrical Engineering and Computer Engineering at Silpakorn University, Nakhon Pathom province. This university is not far from my home, about a 2-hour journey. At first, I wasn't fond of electrical engineering but luckily, the curriculum included computer-related courses such as programming, database systems, and computer systems. I found that I had a knack for these subjects and they quickly became my favorite courses. Ultimately, I was able to graduate from this university with a GPA of 3.33 within a 4-year.",
-        gpa: "3.33"
+        detail: "After graduating from high school with an average GPA of only 3.13, I thought that it might disappoint my parents because I should have gone to a more prestigious university. However, I decided to study in the Faculty of Electrical Engineering and Computer Engineering at Silpakorn University, Nakhon Pathom province. This university is not far from my home, about a 2-hour journey. At first, I wasn't fond of electrical engineering but luckily, the curriculum included computer-related courses such as programming, database systems, and computer systems. I found that I had a knack for these subjects and they quickly became my favorite courses. Ultimately, I was able to graduate from this university with a GPA of 3.38 within a 4 year.",
+        gpa: "3.38 ( Second-class Honors )"
     },
     {
         location: "Samchukratana Phokharam school",
@@ -23,22 +23,60 @@ const eduExps: homeExperience[] = [
     }
 ]
 const workExps: homeExperience[] = [
+   {
+     location: "Soilfish Co., Ltd.",
+     department: "Software Developer",
+     year: "2023 - now",
+     duration: "1 month",
+     link: "http://aitechnovation.com/",
+     img: "/img/experience/soilfish.png",
+     detail: "After graduating from Silpakorn University, Faculty of Electronic Engineering and Computer Systems. I was looking for a job The company accepts new graduates and can work with a hybrid system. I met soilfish company, passed the interview test and got a job as a software developer. The work is quite challenging because I had to change the tool that I used to be good at nuxt.js to react that works with MUI, which took me only 1 week to adapt, then received DevOps training from seniors in the company. Just 1 month from working at this company, my developer skills have also taken a leap. Although the first part is quite difficult, but still have teammates to help teach and explain the parts that I do not understand.",
+     other: "Full-time"
+  },
     {
         location: "AI Technovation Co.,Ltd.",
         department: "Full-stack Developer",
-        year: "2022 - 2023",
+        year: "2022",
         duration: "6 months",
         link: "http://aitechnovation.com/",
         img: "/img/experience/aitech.jpg",
         detail: "During the summer and the first semester of my fourth year of undergraduate studies, which lasted for six months, I interned at AI technovation Co.,Ltd. This internship provided me with valuable experiences as the work was very flexible, as the company specialized in providing technology consulting services and developing various systems such as mobile applications, web applications, POS systems, advertising management programs, and many others. I was involved in various tasks, such as communicating with clients, designing web pages, working on both the front-end and back-end development, as well as implementing CI/CD for projects. At times, I also worked as an IT support and had the opportunity to work part-time at the company's restaurant. Although the work environment was relatively flexible, there was a strict requirement to complete tasks on time.",
         other: "Internship"
-    }
+    },
 ]
 </script>
 
 <template>
     <div class="w-full flex justify-center items-center py-0 lg:py-8">
         <div class="container px-5 flex flex-col justify-center items-center">
+
+           <!-- Subtitle Work -->
+           <div data-aos="fade" class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
+               <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
+               <h1 class="text-4xl mb-1">Work</h1>
+           </div>
+           <div data-aos="fade-left" class="w-full timeline pl-10 sm:pl-0 flex flex-col relative" v-for="(work, index) in workExps"
+               :key="index">
+               <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
+                   <div
+                       class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
+                       <p>{{ work.year }}</p> <span class="text-gray-200 sm:text-gray-500">( {{ work.duration }} )</span>
+                   </div>
+                   <div class="timeline-info w-full flex flex-col lg:flex-row items-center space-x-0 lg:space-x-8">
+                       <div class="w-full">
+                           <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ work.department }}</h1>
+                           <NuxtLink :to=work.link class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1"
+                               target="_blank">- {{ work.location }}</NuxtLink>
+                           <p class="my-2 2xl:text-base">{{ work.detail }}</p>
+                           <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">{{
+                               work.other }}</span>
+                       </div>
+                       <div class="w-auto">
+                           <img :src=work.img alt="" class="w-full sm:w-0 lg:w-60 rounded-2xl drop-shadow-2xl my-4 lg:my-0">
+                       </div>
+                   </div>
+               </div>
+           </div>
 
             <!-- Subtitle Education -->
             <div data-aos="fade" class="w-full mb-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
@@ -63,34 +101,6 @@ const workExps: homeExperience[] = [
                         </div>
                         <div class="w-auto">
                             <img :src=education.img alt="" class="w-full sm:w-0 lg:w-60 rounded-2xl drop-shadow-2xl my-4 lg:my-0">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Subtitle Work -->
-            <div data-aos="fade" class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
-                <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
-                <h1 class="text-4xl mb-1">Work</h1>
-            </div>
-            <div data-aos="fade-left" class="w-full timeline pl-10 sm:pl-0 flex flex-col relative" v-for="(work, index) in workExps"
-                :key="index">
-                <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
-                    <div
-                        class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
-                        <p>{{ work.year }}</p> <span class="text-gray-200 sm:text-gray-500">( {{ work.duration }} )</span>
-                    </div>
-                    <div class="timeline-info w-full flex flex-col lg:flex-row items-center space-x-0 lg:space-x-8">
-                        <div class="w-full">
-                            <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ work.department }}</h1>
-                            <NuxtLink :to=work.link class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1"
-                                target="_blank">- {{ work.location }}</NuxtLink>
-                            <p class="my-2 2xl:text-base">{{ work.detail }}</p>
-                            <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">{{
-                                work.other }}</span>
-                        </div>
-                        <div class="w-auto">
-                            <img :src=work.img alt="" class="w-full sm:w-0 lg:w-60 rounded-2xl drop-shadow-2xl my-4 lg:my-0">
                         </div>
                     </div>
                 </div>

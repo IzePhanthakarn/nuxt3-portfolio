@@ -17,7 +17,7 @@ const props = defineProps({
       default: ''
    },
    lastUpdate: {
-      type: Date,
+      type: String,
       default: ''
    },
    score: {
@@ -25,20 +25,20 @@ const props = defineProps({
       default: 0
    }
 });
-const img = props.img.substring(1)
-let image = `https://go-portfolio.onrender.com${img}` 
-// @ts-expect-error
-const millisec = Date.parse(props.lastUpdate);
+// const img = props.img.substring(1)
+// let image = `https://go-portfolio.onrender.com${img}`
 
-const date = new Date(millisec)
+// const millisec = Date.parse(props.lastUpdate);
 
-const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
-const year = date.getFullYear()
-const month = monthNames[date.getMonth()]
-const day = date.getDate()
-const formatDate = `${month}, ${day} ${year}`
+// const date = new Date(millisec)
+
+// const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+//   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+// ];
+// const year = date.getFullYear()
+// const month = monthNames[date.getMonth()]
+// const day = date.getDate()
+// const formatDate = `${month}, ${day} ${year}`
 
 </script>
 

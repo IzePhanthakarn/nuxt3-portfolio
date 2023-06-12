@@ -37,14 +37,6 @@ export interface homeProject {
    tag: object
 }
 
-export interface homePricing {
-   icon: String
-   name: String
-   price: String
-   checkLists: String[]
-   link: String
-}
-
 export interface portfolioCard {
    img: string
    name: string
