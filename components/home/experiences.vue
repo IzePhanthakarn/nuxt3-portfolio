@@ -8,7 +8,7 @@ const eduExps: homeExperience[] = [
       duration: "4 years",
       link: "https://www.su.ac.th/",
       detail: "After graduating from high school, I went on to study electronics and computer systems engineering at Silpakorn University in Nakhon Pathom. I excelled in computer and programming subjects. But the weak point is the subject about electricity.",
-      gpa: "3.33"
+      gpa: "3.33 ( Second-class Honors )"
    },
    {
       location: "Samchukratana Phokharam school",
@@ -22,14 +22,23 @@ const eduExps: homeExperience[] = [
 ]
 const workExps: homeExperience[] = [
    {
+      location: "Soilfish Co., Ltd.",
+      department: "Software Developer",
+      year: "2023 - now",
+      duration: "1 month",
+      link: "http://aitechnovation.com/",
+      detail: "I was assigned as a software developer. I replaced my favorite tools like nuxt.js with react and learned to use new tools like Slack, Jira, Bitbucket, Jenkins and many others. And I gained knowledge about DevOps from teaching seniors in this company.",
+      other: "Full-time"
+   },
+   {
       location: "AI Technovation Co.,Ltd.",
       department: "Full-stack Developer",
-      year: "2022 - 2023",
+      year: "2022",
       duration: "6 months",
       link: "http://aitechnovation.com/",
       detail: "I have been interning at AI Technovation Ltd. for 6 months as a Back-end Developer. The working environment here is quite flexible as it is a startup company. My responsibilities include communicating with clients, designing web pages, developing both Front-end and Back-end, and working on CI/CD.",
       other: "Internship"
-   }
+   },
 ]
 </script>
 
@@ -39,6 +48,30 @@ const workExps: homeExperience[] = [
          <div data-aos="fade">
             <h1 class="head after:content-['education_&_work'] after:bg-color-base before:bg-primary mx-auto">
                My Experiences</h1>
+         </div>
+
+         <!-- Subtitle Work -->
+         <div data-aos="fade-right"
+            class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
+            <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
+            <h1 class="text-3xl mb-1">Work</h1>
+         </div>
+         <div data-aos="fade-left" class="w-full timeline pl-10 sm:pl-0 flex flex-col relative"
+            v-for="(work, index) in workExps" :key="index">
+            <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
+               <div
+                  class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
+                  <p>{{ work.year }}</p> <span class="text-gray-200 sm:text-gray-500">( {{ work.duration }} )</span>
+               </div>
+               <div class="timeline-info w-full">
+                  <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ work.department }}</h1>
+                  <NuxtLink :to=work.link class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1" target="_blank">
+                     - {{ work.location }}</NuxtLink>
+                  <p class="my-2 2xl:text-base">{{ work.detail }}</p>
+                  <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">{{ work.other
+                  }}</span>
+               </div>
+            </div>
          </div>
 
          <!-- Subtitle Education -->
@@ -62,30 +95,6 @@ const workExps: homeExperience[] = [
                   <p class="my-2 2xl:text-base">{{ education.detail }}</p>
                   <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">GPA : {{
                      education.gpa }}</span>
-               </div>
-            </div>
-         </div>
-
-         <!-- Subtitle Work -->
-         <div data-aos="fade-right"
-            class="w-full my-4 -py-4 font-semibold tracking-wider flex items-end space-x-2 sm:space-x-4">
-            <Icon class="text-primary" name="uil-briefcase-alt" size="55" />
-            <h1 class="text-3xl mb-1">Work</h1>
-         </div>
-         <div data-aos="fade-left" class="w-full timeline pl-10 sm:pl-0 flex flex-col relative"
-            v-for="(work, index) in workExps" :key="index">
-            <div class="timeline-bg bg-primary mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
-               <div
-                  class="timeline-date py-2 sm:py-0 font-semibold text-lg xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0">
-                  <p>{{ work.year }}</p> <span class="text-gray-200 sm:text-gray-500">( {{ work.duration }} )</span>
-               </div>
-               <div class="timeline-info w-full">
-                  <h1 class="text-2xl xl:text-lg 2xl:text-xl font-medium">{{ work.department }}</h1>
-                  <NuxtLink :to=work.link class="sm:text-xl 2xl:text-lg text-primary xl:font-medium -mt-1" target="_blank">
-                     - {{ work.location }}</NuxtLink>
-                  <p class="my-2 2xl:text-base">{{ work.detail }}</p>
-                  <span class="text-highlight border-l-[3px] pl-2 border-primary text-base font-semibold">{{ work.other
-                  }}</span>
                </div>
             </div>
          </div>

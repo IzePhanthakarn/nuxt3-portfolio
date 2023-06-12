@@ -5,7 +5,7 @@ const menus: Menu[] = [
    { name: 'Home', link: '/', activeLink: ['/'], icon: 'uil:home-alt' },
    { name: 'About', link: '/about', activeLink: ['/about'], icon: 'uil:user-square' },
    { name: 'Portfolio', link: '/portfolio', activeLink: ['/portfolio'], icon: 'uil:image-v' },
-   { name: 'Pricing', link: '/pricing', activeLink: ['/pricing', '/pricing/landing-page', '/pricing/multi-page', '/pricing/web-application'], icon: 'uil:pricetag-alt' },
+   { name: 'Testimonials', link: '/testimonials', activeLink: ['/testimonials', '/testimonials/add'], icon: 'lucide:quote' },
    { name: 'Blogs', link: '/blogs', activeLink: ['/blogs'], icon: 'uil:blogger-alt' },
    { name: 'Web Service', link: '/services', activeLink: serviceActive, icon: 'uil:shutter-alt' },
 ]
@@ -20,7 +20,7 @@ function closeMenu() {
 }
 
 function myScrollFunc() {
-   var positionScrollY = window.scrollY;
+   let positionScrollY = window.scrollY;
    is_scroll.value = positionScrollY <= 20 ? false : true;
 };
 

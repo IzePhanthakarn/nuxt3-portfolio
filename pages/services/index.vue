@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-    title: 'Phanthakarn | Portfolio',
+    title: 'Phanthakarn | Web Service',
 });
 const services = [
     { img: "/img/services/calculator.png", projectTag: ["Calculator"], name: "Calculator", icon: "uil:calculator-alt", link: "/services/calculator", description: "This web service is an online calculator that can be accessed through a website. It supports basic mathematical calculations." },

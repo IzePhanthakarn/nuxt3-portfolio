@@ -26,10 +26,10 @@ const testimonials = [
 </script>
 
 <template>
-    <!-- <div v-if="pending" class="height-screen pt-24 flex items-center justify-center">
-        <Loader />
-    </div> -->
-    <div class="w-full height-screen text-white flex pt-24 ">
+   <div class="w-full height-screen text-white flex pt-24 ">
+       <!-- <div v-if="pending" class="height-screen pt-24 flex items-center justify-center">
+           <Loader />
+       </div> -->
         <div class="container mx-auto px-5 flex flex-col">
 
             <!-- Title -->
